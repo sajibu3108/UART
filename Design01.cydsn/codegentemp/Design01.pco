@@ -1,0 +1,88 @@
+# Design01
+# 2017-05-09 16:31:09Z
+
+# IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 0
+# IO_1@[IOP=(1)][IoId=(1)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 1
+# IO_3@[IOP=(1)][IoId=(3)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 3
+# IO_0@[IOP=(15)][IoId=(0)] is reserved: MhzXtalEnabled
+dont_use_io iocell 15 0
+# IO_1@[IOP=(15)][IoId=(1)] is reserved: MhzXtalEnabled
+dont_use_io iocell 15 1
+set_location "ClockBlock" clockblockcell -1 -1 0
+set_io "START(0)" iocell 15 5
+set_io "ADC_IN(0)" iocell 6 5
+set_io "\USBUART:Dm(0)\" iocell 15 7
+set_location "\USBUART:Dp\" logicalport -1 -1 15
+set_io "\USBUART:Dp(0)\" iocell 15 6
+set_io "\LCD:LCDPort(0)\" iocell 2 0
+set_io "\LCD:LCDPort(1)\" iocell 2 1
+set_io "\LCD:LCDPort(2)\" iocell 2 2
+set_io "\LCD:LCDPort(3)\" iocell 2 3
+set_io "\LCD:LCDPort(4)\" iocell 2 4
+set_io "\LCD:LCDPort(5)\" iocell 2 5
+set_io "\LCD:LCDPort(6)\" iocell 2 6
+set_io "Rx_1(0)" iocell 6 6
+set_io "Tx_1(0)" iocell 6 0
+set_io "Trigger(0)" iocell 1 6
+set_io "echo(0)" iocell 1 7
+set_io "In1(0)" iocell 5 2
+set_io "In0(0)" iocell 5 6
+set_io "enable(0)" iocell 5 0
+set_location "__ONE__" 0 5 0 0
+set_location "\Timer:TimerUDB:status_tc\" 0 2 1 0
+set_location "Net_141" 0 2 0 1
+set_location "\UART:BUART:counter_load_not\" 0 5 1 1
+set_location "\UART:BUART:tx_status_0\" 1 5 0 1
+set_location "\UART:BUART:tx_status_2\" 1 4 0 1
+set_location "\UART:BUART:rx_counter_load\" 1 4 1 3
+set_location "\UART:BUART:rx_postpoll\" 1 5 1 1
+set_location "\UART:BUART:rx_status_4\" 1 3 0 2
+set_location "\UART:BUART:rx_status_5\" 1 3 0 1
+set_location "Net_1042" 0 2 0 0
+set_location "\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\" 1 2 6
+set_location "\Timer:TimerUDB:rstSts:stsreg\" 0 3 4
+set_location "\Timer:TimerUDB:sT24:timerdp:u0\" 1 2 2
+set_location "\Timer:TimerUDB:sT24:timerdp:u1\" 0 2 2
+set_location "\Timer:TimerUDB:sT24:timerdp:u2\" 0 3 2
+set_location "\ADC:DSM\" dsmodcell -1 -1 0
+set_location "\ADC:IRQ\" interrupt -1 -1 29
+set_location "\ADC:DEC\" decimatorcell -1 -1 0
+set_location "isr_10" interrupt -1 -1 3
+set_location "\USBUART:dp_int\" interrupt -1 -1 12
+set_location "\USBUART:USB\" usbcell -1 -1 0
+set_location "\USBUART:ep_3\" interrupt -1 -1 2
+set_location "\USBUART:ep_2\" interrupt -1 -1 1
+set_location "\USBUART:ep_1\" interrupt -1 -1 0
+set_location "\USBUART:ep_0\" interrupt -1 -1 24
+set_location "\USBUART:bus_reset\" interrupt -1 -1 23
+set_location "\USBUART:arb_int\" interrupt -1 -1 22
+set_location "\USBUART:sof_int\" interrupt -1 -1 21
+set_location "\UART:BUART:sTX:TxShifter:u0\" 1 3 2
+set_location "\UART:BUART:sTX:sCLOCK:TxBitClkGen\" 0 5 2
+set_location "\UART:BUART:sTX:TxSts\" 1 5 4
+set_location "\UART:BUART:sRX:RxShifter:u0\" 1 5 2
+set_location "\UART:BUART:sRX:RxBitCounter\" 1 4 7
+set_location "\UART:BUART:sRX:RxSts\" 1 3 4
+set_location "\Timer2:TimerHW\" timercell -1 -1 1
+set_location "\Trigger_out:Sync:ctrl_reg\" 0 2 6
+set_location "\T1:TimerHW\" timercell -1 -1 0
+set_location "Net_198" 0 3 1 0
+set_location "\UART:BUART:txn\" 0 2 1 3
+set_location "\UART:BUART:tx_state_1\" 0 4 1 3
+set_location "\UART:BUART:tx_state_0\" 1 2 1 3
+set_location "\UART:BUART:tx_state_2\" 0 2 0 2
+set_location "\UART:BUART:tx_bitclk\" 1 2 0 0
+set_location "\UART:BUART:tx_ctrl_mark_last\" 1 4 0 3
+set_location "\UART:BUART:rx_state_0\" 1 4 0 0
+set_location "\UART:BUART:rx_load_fifo\" 1 3 1 2
+set_location "\UART:BUART:rx_state_3\" 1 3 1 3
+set_location "\UART:BUART:rx_state_2\" 1 4 1 0
+set_location "\UART:BUART:rx_bitclk_enable\" 1 5 1 2
+set_location "\UART:BUART:rx_state_stop1_reg\" 1 3 0 0
+set_location "\UART:BUART:pollcount_1\" 1 5 0 2
+set_location "\UART:BUART:pollcount_0\" 1 5 1 0
+set_location "\UART:BUART:rx_status_3\" 1 4 1 2
+set_location "\UART:BUART:rx_last\" 1 5 1 3

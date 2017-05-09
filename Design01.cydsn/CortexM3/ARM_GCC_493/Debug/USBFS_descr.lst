@@ -1,0 +1,796 @@
+ARM GAS  C:\Users\sajibu\AppData\Local\Temp\ccJwP1BM.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"USBFS_descr.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global	USBFS_TABLE
+  19              		.global	USBFS_DEVICE0_TABLE
+  20              		.global	USBFS_DEVICE0_CONFIGURATION0_TABLE
+  21              		.global	USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS
+  22              		.global	USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE
+  23              		.global	USBFS_DEVICE0_CONFIGURATION0_DESCR
+  24              		.global	USBFS_DEVICE0_DESCR
+  25              		.section	.rodata
+  26              		.align	2
+  27              		.type	USBFS_TABLE, %object
+  28              		.size	USBFS_TABLE, 8
+  29              	USBFS_TABLE:
+  30 0000 01       		.byte	1
+  31 0001 000000   		.space	3
+  32 0004 00000000 		.word	USBFS_DEVICE0_TABLE
+  33              		.type	USBFS_DEVICE0_TABLE, %object
+  34              		.size	USBFS_DEVICE0_TABLE, 24
+  35              	USBFS_DEVICE0_TABLE:
+  36 0008 01       		.byte	1
+  37 0009 000000   		.space	3
+  38 000c 00000000 		.word	USBFS_DEVICE0_DESCR
+  39 0010 00       		.byte	0
+  40 0011 000000   		.space	3
+  41 0014 00000000 		.word	0
+  42 0018 01       		.byte	1
+  43 0019 000000   		.space	3
+  44 001c 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_TABLE
+  45              		.type	USBFS_DEVICE0_CONFIGURATION0_TABLE, %object
+  46              		.size	USBFS_DEVICE0_CONFIGURATION0_TABLE, 32
+  47              	USBFS_DEVICE0_CONFIGURATION0_TABLE:
+  48 0020 01       		.byte	1
+  49 0021 000000   		.space	3
+  50 0024 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_DESCR
+  51 0028 01       		.byte	1
+  52 0029 000000   		.space	3
+  53 002c 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE
+  54 0030 00       		.byte	0
+  55 0031 000000   		.space	3
+  56 0034 00000000 		.word	0
+  57 0038 00       		.byte	0
+ARM GAS  C:\Users\sajibu\AppData\Local\Temp\ccJwP1BM.s 			page 2
+
+
+  58 0039 000000   		.space	3
+  59 003c 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS
+  60              		.type	USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS, %object
+  61              		.size	USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS, 1
+  62              	USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS:
+  63 0040 00       		.space	1
+  64 0041 000000   		.space	3
+  65              		.type	USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE, %object
+  66              		.size	USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE, 8
+  67              	USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE:
+  68 0044 00       		.byte	0
+  69 0045 00       		.byte	0
+  70 0046 01       		.byte	1
+  71 0047 02       		.byte	2
+  72 0048 0800     		.short	8
+  73 004a 00       		.byte	0
+  74 004b 00       		.space	1
+  75              		.type	USBFS_DEVICE0_CONFIGURATION0_DESCR, %object
+  76              		.size	USBFS_DEVICE0_CONFIGURATION0_DESCR, 25
+  77              	USBFS_DEVICE0_CONFIGURATION0_DESCR:
+  78 004c 09       		.byte	9
+  79 004d 02       		.byte	2
+  80 004e 19       		.byte	25
+  81 004f 00       		.byte	0
+  82 0050 01       		.byte	1
+  83 0051 01       		.byte	1
+  84 0052 00       		.byte	0
+  85 0053 80       		.byte	-128
+  86 0054 19       		.byte	25
+  87 0055 09       		.byte	9
+  88 0056 04       		.byte	4
+  89 0057 00       		.byte	0
+  90 0058 00       		.byte	0
+  91 0059 01       		.byte	1
+  92 005a 00       		.byte	0
+  93 005b 00       		.byte	0
+  94 005c 00       		.byte	0
+  95 005d 00       		.byte	0
+  96 005e 07       		.byte	7
+  97 005f 05       		.byte	5
+  98 0060 01       		.byte	1
+  99 0061 02       		.byte	2
+ 100 0062 08       		.byte	8
+ 101 0063 00       		.byte	0
+ 102 0064 00       		.byte	0
+ 103 0065 000000   		.space	3
+ 104              		.type	USBFS_DEVICE0_DESCR, %object
+ 105              		.size	USBFS_DEVICE0_DESCR, 18
+ 106              	USBFS_DEVICE0_DESCR:
+ 107 0068 12       		.byte	18
+ 108 0069 01       		.byte	1
+ 109 006a 00       		.byte	0
+ 110 006b 02       		.byte	2
+ 111 006c 00       		.byte	0
+ 112 006d 00       		.byte	0
+ 113 006e 00       		.byte	0
+ 114 006f 08       		.byte	8
+ARM GAS  C:\Users\sajibu\AppData\Local\Temp\ccJwP1BM.s 			page 3
+
+
+ 115 0070 B4       		.byte	-76
+ 116 0071 04       		.byte	4
+ 117 0072 51       		.byte	81
+ 118 0073 80       		.byte	-128
+ 119 0074 00       		.byte	0
+ 120 0075 00       		.byte	0
+ 121 0076 00       		.byte	0
+ 122 0077 00       		.byte	0
+ 123 0078 00       		.byte	0
+ 124 0079 01       		.byte	1
+ 125 007a 0000     		.text
+ 126              	.Letext0:
+ 127              		.file 1 "Generated_Source\\PSoC5\\cytypes.h"
+ 128              		.file 2 "Generated_Source\\PSoC5\\USBFS.h"
+ 129              		.file 3 "Generated_Source\\PSoC5\\USBFS_descr.c"
+ 130              		.section	.debug_info,"",%progbits
+ 131              	.Ldebug_info0:
+ 132 0000 2B020000 		.4byte	0x22b
+ 133 0004 0400     		.2byte	0x4
+ 134 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 135 000a 04       		.byte	0x4
+ 136 000b 01       		.uleb128 0x1
+ 137 000c B6010000 		.4byte	.LASF31
+ 138 0010 01       		.byte	0x1
+ 139 0011 67010000 		.4byte	.LASF32
+ 140 0015 63020000 		.4byte	.LASF33
+ 141 0019 00000000 		.4byte	.Ldebug_line0
+ 142 001d 02       		.uleb128 0x2
+ 143 001e 01       		.byte	0x1
+ 144 001f 06       		.byte	0x6
+ 145 0020 BD020000 		.4byte	.LASF0
+ 146 0024 02       		.uleb128 0x2
+ 147 0025 01       		.byte	0x1
+ 148 0026 08       		.byte	0x8
+ 149 0027 71000000 		.4byte	.LASF1
+ 150 002b 02       		.uleb128 0x2
+ 151 002c 02       		.byte	0x2
+ 152 002d 05       		.byte	0x5
+ 153 002e 9A020000 		.4byte	.LASF2
+ 154 0032 02       		.uleb128 0x2
+ 155 0033 02       		.byte	0x2
+ 156 0034 07       		.byte	0x7
+ 157 0035 4D000000 		.4byte	.LASF3
+ 158 0039 02       		.uleb128 0x2
+ 159 003a 04       		.byte	0x4
+ 160 003b 05       		.byte	0x5
+ 161 003c B4020000 		.4byte	.LASF4
+ 162 0040 02       		.uleb128 0x2
+ 163 0041 04       		.byte	0x4
+ 164 0042 07       		.byte	0x7
+ 165 0043 31010000 		.4byte	.LASF5
+ 166 0047 02       		.uleb128 0x2
+ 167 0048 08       		.byte	0x8
+ 168 0049 05       		.byte	0x5
+ 169 004a 44020000 		.4byte	.LASF6
+ 170 004e 02       		.uleb128 0x2
+ 171 004f 08       		.byte	0x8
+ARM GAS  C:\Users\sajibu\AppData\Local\Temp\ccJwP1BM.s 			page 4
+
+
+ 172 0050 07       		.byte	0x7
+ 173 0051 50010000 		.4byte	.LASF7
+ 174 0055 03       		.uleb128 0x3
+ 175 0056 04       		.byte	0x4
+ 176 0057 05       		.byte	0x5
+ 177 0058 696E7400 		.ascii	"int\000"
+ 178 005c 02       		.uleb128 0x2
+ 179 005d 04       		.byte	0x4
+ 180 005e 07       		.byte	0x7
+ 181 005f 43010000 		.4byte	.LASF8
+ 182 0063 04       		.uleb128 0x4
+ 183 0064 A4020000 		.4byte	.LASF9
+ 184 0068 01       		.byte	0x1
+ 185 0069 9201     		.2byte	0x192
+ 186 006b 24000000 		.4byte	0x24
+ 187 006f 04       		.uleb128 0x4
+ 188 0070 D8000000 		.4byte	.LASF10
+ 189 0074 01       		.byte	0x1
+ 190 0075 9301     		.2byte	0x193
+ 191 0077 32000000 		.4byte	0x32
+ 192 007b 02       		.uleb128 0x2
+ 193 007c 04       		.byte	0x4
+ 194 007d 04       		.byte	0x4
+ 195 007e 60000000 		.4byte	.LASF11
+ 196 0082 02       		.uleb128 0x2
+ 197 0083 08       		.byte	0x8
+ 198 0084 04       		.byte	0x4
+ 199 0085 C6000000 		.4byte	.LASF12
+ 200 0089 02       		.uleb128 0x2
+ 201 008a 01       		.byte	0x1
+ 202 008b 08       		.byte	0x8
+ 203 008c 5E020000 		.4byte	.LASF13
+ 204 0090 02       		.uleb128 0x2
+ 205 0091 04       		.byte	0x4
+ 206 0092 07       		.byte	0x7
+ 207 0093 AD010000 		.4byte	.LASF14
+ 208 0097 05       		.uleb128 0x5
+ 209 0098 08       		.byte	0x8
+ 210 0099 02       		.byte	0x2
+ 211 009a 95       		.byte	0x95
+ 212 009b E8000000 		.4byte	0xe8
+ 213 009f 06       		.uleb128 0x6
+ 214 00a0 AA020000 		.4byte	.LASF15
+ 215 00a4 02       		.byte	0x2
+ 216 00a5 97       		.byte	0x97
+ 217 00a6 63000000 		.4byte	0x63
+ 218 00aa 00       		.byte	0
+ 219 00ab 06       		.uleb128 0x6
+ 220 00ac 66000000 		.4byte	.LASF16
+ 221 00b0 02       		.byte	0x2
+ 222 00b1 98       		.byte	0x98
+ 223 00b2 63000000 		.4byte	0x63
+ 224 00b6 01       		.byte	0x1
+ 225 00b7 06       		.uleb128 0x6
+ 226 00b8 AD000000 		.4byte	.LASF17
+ 227 00bc 02       		.byte	0x2
+ 228 00bd 99       		.byte	0x99
+ARM GAS  C:\Users\sajibu\AppData\Local\Temp\ccJwP1BM.s 			page 5
+
+
+ 229 00be 63000000 		.4byte	0x63
+ 230 00c2 02       		.byte	0x2
+ 231 00c3 06       		.uleb128 0x6
+ 232 00c4 7F000000 		.4byte	.LASF18
+ 233 00c8 02       		.byte	0x2
+ 234 00c9 9A       		.byte	0x9a
+ 235 00ca 63000000 		.4byte	0x63
+ 236 00ce 03       		.byte	0x3
+ 237 00cf 06       		.uleb128 0x6
+ 238 00d0 CD000000 		.4byte	.LASF19
+ 239 00d4 02       		.byte	0x2
+ 240 00d5 9B       		.byte	0x9b
+ 241 00d6 6F000000 		.4byte	0x6f
+ 242 00da 04       		.byte	0x4
+ 243 00db 06       		.uleb128 0x6
+ 244 00dc C9020000 		.4byte	.LASF20
+ 245 00e0 02       		.byte	0x2
+ 246 00e1 9C       		.byte	0x9c
+ 247 00e2 63000000 		.4byte	0x63
+ 248 00e6 06       		.byte	0x6
+ 249 00e7 00       		.byte	0
+ 250 00e8 07       		.uleb128 0x7
+ 251 00e9 93010000 		.4byte	.LASF21
+ 252 00ed 02       		.byte	0x2
+ 253 00ee 9D       		.byte	0x9d
+ 254 00ef 97000000 		.4byte	0x97
+ 255 00f3 05       		.uleb128 0x5
+ 256 00f4 08       		.byte	0x8
+ 257 00f5 02       		.byte	0x2
+ 258 00f6 AC       		.byte	0xac
+ 259 00f7 12010000 		.4byte	0x112
+ 260 00fb 08       		.uleb128 0x8
+ 261 00fc 6300     		.ascii	"c\000"
+ 262 00fe 02       		.byte	0x2
+ 263 00ff AE       		.byte	0xae
+ 264 0100 63000000 		.4byte	0x63
+ 265 0104 00       		.byte	0
+ 266 0105 06       		.uleb128 0x6
+ 267 0106 8C010000 		.4byte	.LASF22
+ 268 010a 02       		.byte	0x2
+ 269 010b AF       		.byte	0xaf
+ 270 010c 12010000 		.4byte	0x112
+ 271 0110 04       		.byte	0x4
+ 272 0111 00       		.byte	0
+ 273 0112 09       		.uleb128 0x9
+ 274 0113 04       		.byte	0x4
+ 275 0114 18010000 		.4byte	0x118
+ 276 0118 0A       		.uleb128 0xa
+ 277 0119 07       		.uleb128 0x7
+ 278 011a 52020000 		.4byte	.LASF23
+ 279 011e 02       		.byte	0x2
+ 280 011f B0       		.byte	0xb0
+ 281 0120 F3000000 		.4byte	0xf3
+ 282 0124 0B       		.uleb128 0xb
+ 283 0125 63000000 		.4byte	0x63
+ 284 0129 34010000 		.4byte	0x134
+ 285 012d 0C       		.uleb128 0xc
+ARM GAS  C:\Users\sajibu\AppData\Local\Temp\ccJwP1BM.s 			page 6
+
+
+ 286 012e 90000000 		.4byte	0x90
+ 287 0132 11       		.byte	0x11
+ 288 0133 00       		.byte	0
+ 289 0134 0D       		.uleb128 0xd
+ 290 0135 00000000 		.4byte	.LASF24
+ 291 0139 03       		.byte	0x3
+ 292 013a 24       		.byte	0x24
+ 293 013b 45010000 		.4byte	0x145
+ 294 013f 05       		.uleb128 0x5
+ 295 0140 03       		.byte	0x3
+ 296 0141 00000000 		.4byte	USBFS_DEVICE0_DESCR
+ 297 0145 0E       		.uleb128 0xe
+ 298 0146 24010000 		.4byte	0x124
+ 299 014a 0B       		.uleb128 0xb
+ 300 014b 63000000 		.4byte	0x63
+ 301 014f 5A010000 		.4byte	0x15a
+ 302 0153 0C       		.uleb128 0xc
+ 303 0154 90000000 		.4byte	0x90
+ 304 0158 18       		.byte	0x18
+ 305 0159 00       		.byte	0
+ 306 015a 0D       		.uleb128 0xd
+ 307 015b 0E010000 		.4byte	.LASF25
+ 308 015f 03       		.byte	0x3
+ 309 0160 37       		.byte	0x37
+ 310 0161 6B010000 		.4byte	0x16b
+ 311 0165 05       		.uleb128 0x5
+ 312 0166 03       		.byte	0x3
+ 313 0167 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_DESCR
+ 314 016b 0E       		.uleb128 0xe
+ 315 016c 4A010000 		.4byte	0x14a
+ 316 0170 0B       		.uleb128 0xb
+ 317 0171 E8000000 		.4byte	0xe8
+ 318 0175 80010000 		.4byte	0x180
+ 319 0179 0C       		.uleb128 0xc
+ 320 017a 90000000 		.4byte	0x90
+ 321 017e 00       		.byte	0
+ 322 017f 00       		.byte	0
+ 323 0180 0D       		.uleb128 0xd
+ 324 0181 DF000000 		.4byte	.LASF26
+ 325 0185 03       		.byte	0x3
+ 326 0186 62       		.byte	0x62
+ 327 0187 91010000 		.4byte	0x191
+ 328 018b 05       		.uleb128 0x5
+ 329 018c 03       		.byte	0x3
+ 330 018d 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE
+ 331 0191 0E       		.uleb128 0xe
+ 332 0192 70010000 		.4byte	0x170
+ 333 0196 0B       		.uleb128 0xb
+ 334 0197 63000000 		.4byte	0x63
+ 335 019b A6010000 		.4byte	0x1a6
+ 336 019f 0C       		.uleb128 0xc
+ 337 01a0 90000000 		.4byte	0x90
+ 338 01a4 00       		.byte	0
+ 339 01a5 00       		.byte	0
+ 340 01a6 0D       		.uleb128 0xd
+ 341 01a7 14000000 		.4byte	.LASF27
+ 342 01ab 03       		.byte	0x3
+ARM GAS  C:\Users\sajibu\AppData\Local\Temp\ccJwP1BM.s 			page 7
+
+
+ 343 01ac 66       		.byte	0x66
+ 344 01ad B7010000 		.4byte	0x1b7
+ 345 01b1 05       		.uleb128 0x5
+ 346 01b2 03       		.byte	0x3
+ 347 01b3 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS
+ 348 01b7 0E       		.uleb128 0xe
+ 349 01b8 96010000 		.4byte	0x196
+ 350 01bc 0B       		.uleb128 0xb
+ 351 01bd 19010000 		.4byte	0x119
+ 352 01c1 CC010000 		.4byte	0x1cc
+ 353 01c5 0C       		.uleb128 0xc
+ 354 01c6 90000000 		.4byte	0x90
+ 355 01ca 03       		.byte	0x3
+ 356 01cb 00       		.byte	0
+ 357 01cc 0D       		.uleb128 0xd
+ 358 01cd 8A000000 		.4byte	.LASF28
+ 359 01d1 03       		.byte	0x3
+ 360 01d2 6E       		.byte	0x6e
+ 361 01d3 DD010000 		.4byte	0x1dd
+ 362 01d7 05       		.uleb128 0x5
+ 363 01d8 03       		.byte	0x3
+ 364 01d9 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_TABLE
+ 365 01dd 0E       		.uleb128 0xe
+ 366 01de BC010000 		.4byte	0x1bc
+ 367 01e2 0B       		.uleb128 0xb
+ 368 01e3 19010000 		.4byte	0x119
+ 369 01e7 F2010000 		.4byte	0x1f2
+ 370 01eb 0C       		.uleb128 0xc
+ 371 01ec 90000000 		.4byte	0x90
+ 372 01f0 02       		.byte	0x2
+ 373 01f1 00       		.byte	0
+ 374 01f2 0D       		.uleb128 0xd
+ 375 01f3 B2000000 		.4byte	.LASF29
+ 376 01f7 03       		.byte	0x3
+ 377 01f8 78       		.byte	0x78
+ 378 01f9 03020000 		.4byte	0x203
+ 379 01fd 05       		.uleb128 0x5
+ 380 01fe 03       		.byte	0x3
+ 381 01ff 00000000 		.4byte	USBFS_DEVICE0_TABLE
+ 382 0203 0E       		.uleb128 0xe
+ 383 0204 E2010000 		.4byte	0x1e2
+ 384 0208 0B       		.uleb128 0xb
+ 385 0209 19010000 		.4byte	0x119
+ 386 020d 18020000 		.4byte	0x218
+ 387 0211 0C       		.uleb128 0xc
+ 388 0212 90000000 		.4byte	0x90
+ 389 0216 00       		.byte	0
+ 390 0217 00       		.byte	0
+ 391 0218 0D       		.uleb128 0xd
+ 392 0219 41000000 		.4byte	.LASF30
+ 393 021d 03       		.byte	0x3
+ 394 021e 80       		.byte	0x80
+ 395 021f 29020000 		.4byte	0x229
+ 396 0223 05       		.uleb128 0x5
+ 397 0224 03       		.byte	0x3
+ 398 0225 00000000 		.4byte	USBFS_TABLE
+ 399 0229 0E       		.uleb128 0xe
+ARM GAS  C:\Users\sajibu\AppData\Local\Temp\ccJwP1BM.s 			page 8
+
+
+ 400 022a 08020000 		.4byte	0x208
+ 401 022e 00       		.byte	0
+ 402              		.section	.debug_abbrev,"",%progbits
+ 403              	.Ldebug_abbrev0:
+ 404 0000 01       		.uleb128 0x1
+ 405 0001 11       		.uleb128 0x11
+ 406 0002 01       		.byte	0x1
+ 407 0003 25       		.uleb128 0x25
+ 408 0004 0E       		.uleb128 0xe
+ 409 0005 13       		.uleb128 0x13
+ 410 0006 0B       		.uleb128 0xb
+ 411 0007 03       		.uleb128 0x3
+ 412 0008 0E       		.uleb128 0xe
+ 413 0009 1B       		.uleb128 0x1b
+ 414 000a 0E       		.uleb128 0xe
+ 415 000b 10       		.uleb128 0x10
+ 416 000c 17       		.uleb128 0x17
+ 417 000d 00       		.byte	0
+ 418 000e 00       		.byte	0
+ 419 000f 02       		.uleb128 0x2
+ 420 0010 24       		.uleb128 0x24
+ 421 0011 00       		.byte	0
+ 422 0012 0B       		.uleb128 0xb
+ 423 0013 0B       		.uleb128 0xb
+ 424 0014 3E       		.uleb128 0x3e
+ 425 0015 0B       		.uleb128 0xb
+ 426 0016 03       		.uleb128 0x3
+ 427 0017 0E       		.uleb128 0xe
+ 428 0018 00       		.byte	0
+ 429 0019 00       		.byte	0
+ 430 001a 03       		.uleb128 0x3
+ 431 001b 24       		.uleb128 0x24
+ 432 001c 00       		.byte	0
+ 433 001d 0B       		.uleb128 0xb
+ 434 001e 0B       		.uleb128 0xb
+ 435 001f 3E       		.uleb128 0x3e
+ 436 0020 0B       		.uleb128 0xb
+ 437 0021 03       		.uleb128 0x3
+ 438 0022 08       		.uleb128 0x8
+ 439 0023 00       		.byte	0
+ 440 0024 00       		.byte	0
+ 441 0025 04       		.uleb128 0x4
+ 442 0026 16       		.uleb128 0x16
+ 443 0027 00       		.byte	0
+ 444 0028 03       		.uleb128 0x3
+ 445 0029 0E       		.uleb128 0xe
+ 446 002a 3A       		.uleb128 0x3a
+ 447 002b 0B       		.uleb128 0xb
+ 448 002c 3B       		.uleb128 0x3b
+ 449 002d 05       		.uleb128 0x5
+ 450 002e 49       		.uleb128 0x49
+ 451 002f 13       		.uleb128 0x13
+ 452 0030 00       		.byte	0
+ 453 0031 00       		.byte	0
+ 454 0032 05       		.uleb128 0x5
+ 455 0033 13       		.uleb128 0x13
+ 456 0034 01       		.byte	0x1
+ARM GAS  C:\Users\sajibu\AppData\Local\Temp\ccJwP1BM.s 			page 9
+
+
+ 457 0035 0B       		.uleb128 0xb
+ 458 0036 0B       		.uleb128 0xb
+ 459 0037 3A       		.uleb128 0x3a
+ 460 0038 0B       		.uleb128 0xb
+ 461 0039 3B       		.uleb128 0x3b
+ 462 003a 0B       		.uleb128 0xb
+ 463 003b 01       		.uleb128 0x1
+ 464 003c 13       		.uleb128 0x13
+ 465 003d 00       		.byte	0
+ 466 003e 00       		.byte	0
+ 467 003f 06       		.uleb128 0x6
+ 468 0040 0D       		.uleb128 0xd
+ 469 0041 00       		.byte	0
+ 470 0042 03       		.uleb128 0x3
+ 471 0043 0E       		.uleb128 0xe
+ 472 0044 3A       		.uleb128 0x3a
+ 473 0045 0B       		.uleb128 0xb
+ 474 0046 3B       		.uleb128 0x3b
+ 475 0047 0B       		.uleb128 0xb
+ 476 0048 49       		.uleb128 0x49
+ 477 0049 13       		.uleb128 0x13
+ 478 004a 38       		.uleb128 0x38
+ 479 004b 0B       		.uleb128 0xb
+ 480 004c 00       		.byte	0
+ 481 004d 00       		.byte	0
+ 482 004e 07       		.uleb128 0x7
+ 483 004f 16       		.uleb128 0x16
+ 484 0050 00       		.byte	0
+ 485 0051 03       		.uleb128 0x3
+ 486 0052 0E       		.uleb128 0xe
+ 487 0053 3A       		.uleb128 0x3a
+ 488 0054 0B       		.uleb128 0xb
+ 489 0055 3B       		.uleb128 0x3b
+ 490 0056 0B       		.uleb128 0xb
+ 491 0057 49       		.uleb128 0x49
+ 492 0058 13       		.uleb128 0x13
+ 493 0059 00       		.byte	0
+ 494 005a 00       		.byte	0
+ 495 005b 08       		.uleb128 0x8
+ 496 005c 0D       		.uleb128 0xd
+ 497 005d 00       		.byte	0
+ 498 005e 03       		.uleb128 0x3
+ 499 005f 08       		.uleb128 0x8
+ 500 0060 3A       		.uleb128 0x3a
+ 501 0061 0B       		.uleb128 0xb
+ 502 0062 3B       		.uleb128 0x3b
+ 503 0063 0B       		.uleb128 0xb
+ 504 0064 49       		.uleb128 0x49
+ 505 0065 13       		.uleb128 0x13
+ 506 0066 38       		.uleb128 0x38
+ 507 0067 0B       		.uleb128 0xb
+ 508 0068 00       		.byte	0
+ 509 0069 00       		.byte	0
+ 510 006a 09       		.uleb128 0x9
+ 511 006b 0F       		.uleb128 0xf
+ 512 006c 00       		.byte	0
+ 513 006d 0B       		.uleb128 0xb
+ARM GAS  C:\Users\sajibu\AppData\Local\Temp\ccJwP1BM.s 			page 10
+
+
+ 514 006e 0B       		.uleb128 0xb
+ 515 006f 49       		.uleb128 0x49
+ 516 0070 13       		.uleb128 0x13
+ 517 0071 00       		.byte	0
+ 518 0072 00       		.byte	0
+ 519 0073 0A       		.uleb128 0xa
+ 520 0074 26       		.uleb128 0x26
+ 521 0075 00       		.byte	0
+ 522 0076 00       		.byte	0
+ 523 0077 00       		.byte	0
+ 524 0078 0B       		.uleb128 0xb
+ 525 0079 01       		.uleb128 0x1
+ 526 007a 01       		.byte	0x1
+ 527 007b 49       		.uleb128 0x49
+ 528 007c 13       		.uleb128 0x13
+ 529 007d 01       		.uleb128 0x1
+ 530 007e 13       		.uleb128 0x13
+ 531 007f 00       		.byte	0
+ 532 0080 00       		.byte	0
+ 533 0081 0C       		.uleb128 0xc
+ 534 0082 21       		.uleb128 0x21
+ 535 0083 00       		.byte	0
+ 536 0084 49       		.uleb128 0x49
+ 537 0085 13       		.uleb128 0x13
+ 538 0086 2F       		.uleb128 0x2f
+ 539 0087 0B       		.uleb128 0xb
+ 540 0088 00       		.byte	0
+ 541 0089 00       		.byte	0
+ 542 008a 0D       		.uleb128 0xd
+ 543 008b 34       		.uleb128 0x34
+ 544 008c 00       		.byte	0
+ 545 008d 03       		.uleb128 0x3
+ 546 008e 0E       		.uleb128 0xe
+ 547 008f 3A       		.uleb128 0x3a
+ 548 0090 0B       		.uleb128 0xb
+ 549 0091 3B       		.uleb128 0x3b
+ 550 0092 0B       		.uleb128 0xb
+ 551 0093 49       		.uleb128 0x49
+ 552 0094 13       		.uleb128 0x13
+ 553 0095 3F       		.uleb128 0x3f
+ 554 0096 19       		.uleb128 0x19
+ 555 0097 02       		.uleb128 0x2
+ 556 0098 18       		.uleb128 0x18
+ 557 0099 00       		.byte	0
+ 558 009a 00       		.byte	0
+ 559 009b 0E       		.uleb128 0xe
+ 560 009c 26       		.uleb128 0x26
+ 561 009d 00       		.byte	0
+ 562 009e 49       		.uleb128 0x49
+ 563 009f 13       		.uleb128 0x13
+ 564 00a0 00       		.byte	0
+ 565 00a1 00       		.byte	0
+ 566 00a2 00       		.byte	0
+ 567              		.section	.debug_aranges,"",%progbits
+ 568 0000 14000000 		.4byte	0x14
+ 569 0004 0200     		.2byte	0x2
+ 570 0006 00000000 		.4byte	.Ldebug_info0
+ARM GAS  C:\Users\sajibu\AppData\Local\Temp\ccJwP1BM.s 			page 11
+
+
+ 571 000a 04       		.byte	0x4
+ 572 000b 00       		.byte	0
+ 573 000c 0000     		.2byte	0
+ 574 000e 0000     		.2byte	0
+ 575 0010 00000000 		.4byte	0
+ 576 0014 00000000 		.4byte	0
+ 577              		.section	.debug_line,"",%progbits
+ 578              	.Ldebug_line0:
+ 579 0000 59000000 		.section	.debug_str,"MS",%progbits,1
+ 579      02005300 
+ 579      00000201 
+ 579      FB0E0D00 
+ 579      01010101 
+ 580              	.LASF24:
+ 581 0000 55534246 		.ascii	"USBFS_DEVICE0_DESCR\000"
+ 581      535F4445 
+ 581      56494345 
+ 581      305F4445 
+ 581      53435200 
+ 582              	.LASF27:
+ 583 0014 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS\000"
+ 583      535F4445 
+ 583      56494345 
+ 583      305F434F 
+ 583      4E464947 
+ 584              	.LASF30:
+ 585 0041 55534246 		.ascii	"USBFS_TABLE\000"
+ 585      535F5441 
+ 585      424C4500 
+ 586              	.LASF3:
+ 587 004d 73686F72 		.ascii	"short unsigned int\000"
+ 587      7420756E 
+ 587      7369676E 
+ 587      65642069 
+ 587      6E7400
+ 588              	.LASF11:
+ 589 0060 666C6F61 		.ascii	"float\000"
+ 589      7400
+ 590              	.LASF16:
+ 591 0066 616C7453 		.ascii	"altSetting\000"
+ 591      65747469 
+ 591      6E6700
+ 592              	.LASF1:
+ 593 0071 756E7369 		.ascii	"unsigned char\000"
+ 593      676E6564 
+ 593      20636861 
+ 593      7200
+ 594              	.LASF18:
+ 595 007f 61747472 		.ascii	"attributes\000"
+ 595      69627574 
+ 595      657300
+ 596              	.LASF28:
+ 597 008a 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_TABLE\000"
+ 597      535F4445 
+ 597      56494345 
+ 597      305F434F 
+ 597      4E464947 
+ARM GAS  C:\Users\sajibu\AppData\Local\Temp\ccJwP1BM.s 			page 12
+
+
+ 598              	.LASF17:
+ 599 00ad 61646472 		.ascii	"addr\000"
+ 599      00
+ 600              	.LASF29:
+ 601 00b2 55534246 		.ascii	"USBFS_DEVICE0_TABLE\000"
+ 601      535F4445 
+ 601      56494345 
+ 601      305F5441 
+ 601      424C4500 
+ 602              	.LASF12:
+ 603 00c6 646F7562 		.ascii	"double\000"
+ 603      6C6500
+ 604              	.LASF19:
+ 605 00cd 62756666 		.ascii	"bufferSize\000"
+ 605      65725369 
+ 605      7A6500
+ 606              	.LASF10:
+ 607 00d8 75696E74 		.ascii	"uint16\000"
+ 607      313600
+ 608              	.LASF26:
+ 609 00df 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE\000"
+ 609      535F4445 
+ 609      56494345 
+ 609      305F434F 
+ 609      4E464947 
+ 610              	.LASF25:
+ 611 010e 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_DESCR\000"
+ 611      535F4445 
+ 611      56494345 
+ 611      305F434F 
+ 611      4E464947 
+ 612              	.LASF5:
+ 613 0131 6C6F6E67 		.ascii	"long unsigned int\000"
+ 613      20756E73 
+ 613      69676E65 
+ 613      6420696E 
+ 613      7400
+ 614              	.LASF8:
+ 615 0143 756E7369 		.ascii	"unsigned int\000"
+ 615      676E6564 
+ 615      20696E74 
+ 615      00
+ 616              	.LASF7:
+ 617 0150 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 617      206C6F6E 
+ 617      6720756E 
+ 617      7369676E 
+ 617      65642069 
+ 618              	.LASF32:
+ 619 0167 47656E65 		.ascii	"Generated_Source\\PSoC5\\USBFS_descr.c\000"
+ 619      72617465 
+ 619      645F536F 
+ 619      75726365 
+ 619      5C50536F 
+ 620              	.LASF22:
+ 621 018c 705F6C69 		.ascii	"p_list\000"
+ 621      737400
+ARM GAS  C:\Users\sajibu\AppData\Local\Temp\ccJwP1BM.s 			page 13
+
+
+ 622              	.LASF21:
+ 623 0193 545F5553 		.ascii	"T_USBFS_EP_SETTINGS_BLOCK\000"
+ 623      4246535F 
+ 623      45505F53 
+ 623      45545449 
+ 623      4E47535F 
+ 624              	.LASF14:
+ 625 01ad 73697A65 		.ascii	"sizetype\000"
+ 625      74797065 
+ 625      00
+ 626              	.LASF31:
+ 627 01b6 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 627      4320342E 
+ 627      392E3320 
+ 627      32303135 
+ 627      30333033 
+ 628 01e9 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 628      20726576 
+ 628      6973696F 
+ 628      6E203232 
+ 628      31323230 
+ 629 021c 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 629      66756E63 
+ 629      74696F6E 
+ 629      2D736563 
+ 629      74696F6E 
+ 630              	.LASF6:
+ 631 0244 6C6F6E67 		.ascii	"long long int\000"
+ 631      206C6F6E 
+ 631      6720696E 
+ 631      7400
+ 632              	.LASF23:
+ 633 0252 545F5553 		.ascii	"T_USBFS_LUT\000"
+ 633      4246535F 
+ 633      4C555400 
+ 634              	.LASF13:
+ 635 025e 63686172 		.ascii	"char\000"
+ 635      00
+ 636              	.LASF33:
+ 637 0263 433A5C55 		.ascii	"C:\\Users\\sajibu\\Desktop\\PSoC\\Cualquiera\\Desig"
+ 637      73657273 
+ 637      5C73616A 
+ 637      6962755C 
+ 637      4465736B 
+ 638 0290 6E30312E 		.ascii	"n01.cydsn\000"
+ 638      63796473 
+ 638      6E00
+ 639              	.LASF2:
+ 640 029a 73686F72 		.ascii	"short int\000"
+ 640      7420696E 
+ 640      7400
+ 641              	.LASF9:
+ 642 02a4 75696E74 		.ascii	"uint8\000"
+ 642      3800
+ 643              	.LASF15:
+ 644 02aa 696E7465 		.ascii	"interface\000"
+ 644      72666163 
+ARM GAS  C:\Users\sajibu\AppData\Local\Temp\ccJwP1BM.s 			page 14
+
+
+ 644      6500
+ 645              	.LASF4:
+ 646 02b4 6C6F6E67 		.ascii	"long int\000"
+ 646      20696E74 
+ 646      00
+ 647              	.LASF0:
+ 648 02bd 7369676E 		.ascii	"signed char\000"
+ 648      65642063 
+ 648      68617200 
+ 649              	.LASF20:
+ 650 02c9 624D6973 		.ascii	"bMisc\000"
+ 650      6300
+ 651              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
