@@ -1,5 +1,5 @@
-C:\Users\Daniel Mendez\Desktop\PSoC\Cualquiera\Design01.cydsn\Design01.cyprj|7fa0dba1-a0ce-4832-9a2e-c956643480b7
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|65c33ed3-e074-421a-af2f-807a910c018b
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|d5bf2de0-204d-4920-ae7a-0a41173d0a6a
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|28a8171e-98b1-49d8-82ba-72f786149e31
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|9a8cf3ab-8096-4186-be81-f9d8374368f5
+C:\Users\sajibu\Desktop\Proyectos PSoC\UART\Design01.cydsn\Design01.cyprj|491fcb04-7996-4697-9e27-8ebe3ab19bb5
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|d3d58416-ee73-4ab9-aff6-8060561ff55d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|b97207c1-780c-448e-826c-1dff2a429d5e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|7d07806d-0ee2-49aa-93ed-af463b177cbe
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|349da4ed-11ef-4186-a757-5dfe0731290e
