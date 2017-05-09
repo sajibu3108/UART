@@ -175,8 +175,6 @@
 <v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\ResetTimer3.lst</v>
 <v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\ResetTimer3_PM.lst</v>
 <v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\START.lst</v>
-<v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\T1.lst</v>
-<v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\T1_PM.lst</v>
 <v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\Timer.lst</v>
 <v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\timer_clock.lst</v>
 <v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\Timer_PM.lst</v>
@@ -235,8 +233,7 @@
 <v>Cualquiera\Design01\Connector20_v1_0.pdf</v>
 <v>Cualquiera\Design01\cy_clock_v2_20</v>
 <v>Cualquiera\Design01\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
-<v>Cualquiera\Design01\cy_constant_v1_0</v>
-<v>Cualquiera\Design01\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
+<v>Cualquiera\Design01\cy_constant_v1_0.pdf</v>
 <v>Cualquiera\Design01\cy_isr_v1_70.pdf</v>
 <v>Cualquiera\Design01\cy_pins_v2_20</v>
 <v>Cualquiera\Design01\cy_pins_v2_20\cy_pins_v2_20.pdf</v>

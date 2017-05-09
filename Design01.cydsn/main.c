@@ -82,7 +82,7 @@ int main(void)
     Timer2_Start();
     Timer_Start();
     
-    T1_Start();//Temporizacion del motor
+    //T1_Start();//Temporizacion del motor
     
     // Interrrup process init with StartEx not simple Start
     isr_10_StartEx(isr_10_Handler);

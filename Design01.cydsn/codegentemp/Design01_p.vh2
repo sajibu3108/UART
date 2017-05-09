@@ -1,5 +1,5 @@
 -- Project:   Design01
--- Generated: 05/09/2017 17:26:24
+-- Generated: 05/09/2017 17:44:53
 -- PSoC Creator  4.0 Update 1
 
 ENTITY Design01 IS
@@ -46,10 +46,9 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     SIGNAL In0(0)__PA : bit;
     SIGNAL In1(0)__PA : bit;
     SIGNAL Net_1042 : bit;
-    SIGNAL Net_1238 : bit;
-    ATTRIBUTE global_signal OF Net_1238 : SIGNAL IS true;
-    SIGNAL Net_1238_local : bit;
     SIGNAL Net_1257 : bit;
+    ATTRIBUTE global_signal OF Net_1257 : SIGNAL IS true;
+    SIGNAL Net_1257_local : bit;
     SIGNAL Net_1322 : bit;
     ATTRIBUTE udbclken_assigned OF Net_1322 : SIGNAL IS "True";
     ATTRIBUTE global_signal OF Net_1322 : SIGNAL IS true;
@@ -112,8 +111,6 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     SIGNAL \ResetTimer3:control_5\ : bit;
     SIGNAL \ResetTimer3:control_6\ : bit;
     SIGNAL \ResetTimer3:control_7\ : bit;
-    SIGNAL \T1:Net_261\ : bit;
-    SIGNAL \T1:Net_57\ : bit;
     SIGNAL \Timer2:Net_261\ : bit;
     SIGNAL \Timer2:Net_51\ : bit;
     SIGNAL \Timer2:Net_57\ : bit;
@@ -216,7 +213,6 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     ATTRIBUTE POWER OF one : SIGNAL IS true;
     SIGNAL \ClockBlock.dclk_glb_ff_1__sig\ : bit;
     SIGNAL \ClockBlock.aclk_glb_ff_0__sig\ : bit;
-    SIGNAL \ClockBlock.dclk_glb_ff_3__sig\ : bit;
     SIGNAL \Timer:TimerUDB:sT24:timerdp:u0.ce0__sig\ : bit;
     SIGNAL \Timer:TimerUDB:sT24:timerdp:u0.cl0__sig\ : bit;
     SIGNAL \Timer:TimerUDB:sT24:timerdp:u0.z0__sig\ : bit;
@@ -741,11 +737,10 @@ BEGIN
             aclk_0 => \ADC:Net_488_local\,
             clk_a_dig_glb_0 => \ADC:Net_488_adig\,
             clk_a_dig_0 => \ADC:Net_488_adig_local\,
-            dclk_glb_3 => Net_1238,
-            dclk_3 => Net_1238_local,
+            dclk_glb_3 => Net_1257,
+            dclk_3 => Net_1257_local,
             dclk_glb_ff_1 => \ClockBlock.dclk_glb_ff_1__sig\,
-            aclk_glb_ff_0 => \ClockBlock.aclk_glb_ff_0__sig\,
-            dclk_glb_ff_3 => \ClockBlock.dclk_glb_ff_3__sig\);
+            aclk_glb_ff_0 => \ClockBlock.aclk_glb_ff_0__sig\);
 
     START:logicalport
         GENERIC MAP(
@@ -1851,7 +1846,7 @@ BEGIN
         PORT MAP(
             pa_out => In0(0)__PA,
             oe => open,
-            pin_input => Net_1257,
+            pin_input => Net_1257_local,
             pad_out => In0(0)_PAD,
             pad_in => In0(0)_PAD,
             in_clock => open,
@@ -2064,7 +2059,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_1042,
-            main_0 => Net_1257);
+            main_0 => Net_1257_local);
 
     \Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\:controlcell
         GENERIC MAP(
@@ -2604,19 +2599,6 @@ BEGIN
             control_1 => \Trigger_out:control_1\,
             control_0 => Net_35,
             busclk => ClockBlock_BUS_CLK);
-
-    \T1:TimerHW\:timercell
-        GENERIC MAP(
-            cy_registers => "")
-        PORT MAP(
-            clock => \ClockBlock.dclk_glb_ff_3__sig\,
-            kill => open,
-            enable => __ONE__,
-            capture => open,
-            timer_reset => open,
-            tc => Net_1257,
-            cmp => \T1:Net_261\,
-            irq => \T1:Net_57\);
 
     \EnableTimer3:Sync:ctrl_reg\:controlcell
         GENERIC MAP(

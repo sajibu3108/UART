@@ -175,9 +175,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\USBUART_Dp_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\USBUART_Dp.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\USBUART_Dp.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\T1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\T1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\T1_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\reloj1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\reloj1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer3.c</File>

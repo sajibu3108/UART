@@ -91,9 +91,6 @@
   <file name="C:\Users\sajibu\Desktop\Proyectos PSoC\UART\Design01.cydsn\codegentemp\enable_aliases.h" value="HEADER;;;;;enable" />
   <file name="C:\Users\sajibu\Desktop\Proyectos PSoC\UART\Design01.cydsn\codegentemp\enable.c" value="SOURCE_C;CortexM3;;;;enable" />
   <file name="C:\Users\sajibu\Desktop\Proyectos PSoC\UART\Design01.cydsn\codegentemp\enable.h" value="HEADER;;;;;enable" />
-  <file name="C:\Users\sajibu\Desktop\Proyectos PSoC\UART\Design01.cydsn\codegentemp\T1.c" value="SOURCE_C;CortexM3;;;;T1" />
-  <file name="C:\Users\sajibu\Desktop\Proyectos PSoC\UART\Design01.cydsn\codegentemp\T1.h" value="HEADER;;;;;T1" />
-  <file name="C:\Users\sajibu\Desktop\Proyectos PSoC\UART\Design01.cydsn\codegentemp\T1_PM.c" value="SOURCE_C;CortexM3;;;;T1" />
   <file name="C:\Users\sajibu\Desktop\Proyectos PSoC\UART\Design01.cydsn\codegentemp\EnableTimer3.h" value="HEADER;;;;;EnableTimer3" />
   <file name="C:\Users\sajibu\Desktop\Proyectos PSoC\UART\Design01.cydsn\codegentemp\EnableTimer3.c" value="SOURCE_C;CortexM3;;;;EnableTimer3" />
   <file name="C:\Users\sajibu\Desktop\Proyectos PSoC\UART\Design01.cydsn\codegentemp\EnableTimer3_PM.c" value="SOURCE_C;CortexM3;;;;EnableTimer3" />

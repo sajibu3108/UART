@@ -6,7 +6,7 @@
 
 #Build Date:         Apr 29 2016 09:00:55
 
-#File Generated:     May 9 2017 17:26:24
+#File Generated:     May 9 2017 17:44:53
 
 #Purpose:            
 
@@ -84,7 +84,7 @@ Clock: ADC_Ext_CP_Clk       | Frequency: N/A       | Target:  24.0 MHz
 Clock: ADC_Ext_CP_Clk(routed) | Frequency: N/A       | Target:  24.0 MHz
 Clock: ADC_theACLK          | Frequency: N/A       | Target:   0.1 MHz
 Clock: ADC_theACLK(fixed-function) | Frequency: N/A       | Target:   0.1 MHz
-Clock: CyBUS_CLK            | Frequency:  53.8 MHz | Target:  24.0 MHz
+Clock: CyBUS_CLK            | Frequency:  53.6 MHz | Target:  24.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.1 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  24.0 MHz
@@ -93,7 +93,7 @@ Clock: CyXTAL               | Frequency: N/A       | Target:  24.0 MHz
 Clock: UART_IntClock        | Frequency:  53.6 MHz | Target:   0.9 MHz
 Clock: \ADC:DSM\/dec_clock  | Frequency: N/A       | Target:   0.1 MHz
 Clock: reloj1               | Frequency: N/A       | Target:   0.0 MHz
-Clock: reloj1(fixed-function) | Frequency: N/A       | Target:   0.0 MHz
+Clock: reloj1(routed)       | Frequency: N/A       | Target:   0.0 MHz
 Clock: timer_clock          | Frequency:  43.5 MHz | Target:   1.0 MHz
 Clock: timer_clock(fixed-function) | Frequency: N/A       | Target:   1.0 MHz
 
@@ -121,7 +121,7 @@ Clock: CyXTAL               | Frequency: N/A       | Target:  24.0 MHz
 Clock: UART_IntClock        | Frequency:   1.4 MHz | Target:   0.9 MHz
 Clock: \ADC:DSM\/dec_clock  | Frequency: N/A       | Target:   0.1 MHz
 Clock: reloj1               | Frequency: N/A       | Target:   0.0 MHz
-Clock: reloj1(fixed-function) | Frequency: N/A       | Target:   0.0 MHz
+Clock: reloj1(routed)       | Frequency: N/A       | Target:   0.0 MHz
 Clock: timer_clock          | Frequency:  43.5 MHz | Target:   1.0 MHz
 Clock: timer_clock(fixed-function) | Frequency: N/A       | Target:   1.0 MHz
 
@@ -172,7 +172,7 @@ Clock: CyXTAL               | Frequency: N/A       | Target:  24.0 MHz
 Clock: UART_IntClock        | Frequency:   1.5 MHz | Target:   0.9 MHz
 Clock: \ADC:DSM\/dec_clock  | Frequency: N/A       | Target:   0.1 MHz
 Clock: reloj1               | Frequency: N/A       | Target:   0.0 MHz
-Clock: reloj1(fixed-function) | Frequency: N/A       | Target:   0.0 MHz
+Clock: reloj1(routed)       | Frequency: N/A       | Target:   0.0 MHz
 Clock: timer_clock          | Frequency:  42.5 MHz | Target:   1.0 MHz
 Clock: timer_clock(fixed-function) | Frequency: N/A       | Target:   1.0 MHz
 
