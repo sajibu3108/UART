@@ -1,5 +1,5 @@
 -- Project:   Design01
--- Generated: 05/09/2017 16:14:50
+-- Generated: 05/09/2017 17:26:25
 -- PSoC Creator  4.0 Update 1
 
 ENTITY Design01 IS
@@ -46,25 +46,27 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     SIGNAL In0(0)__PA : bit;
     SIGNAL In1(0)__PA : bit;
     SIGNAL Net_1042 : bit;
-    ATTRIBUTE placement_force OF Net_1042 : SIGNAL IS "U(0,2,A)0";
+    ATTRIBUTE placement_force OF Net_1042 : SIGNAL IS "U(0,2,B)2";
     SIGNAL Net_1238 : bit;
     ATTRIBUTE global_signal OF Net_1238 : SIGNAL IS true;
     SIGNAL Net_1238_local : bit;
     SIGNAL Net_1257 : bit;
+    SIGNAL Net_1322 : bit;
+    ATTRIBUTE udbclken_assigned OF Net_1322 : SIGNAL IS "True";
+    ATTRIBUTE global_signal OF Net_1322 : SIGNAL IS true;
+    SIGNAL Net_1322_local : bit;
+    SIGNAL Net_1337 : bit;
+    ATTRIBUTE GROUND OF Net_1337 : SIGNAL IS true;
+    SIGNAL Net_1339 : bit;
     SIGNAL Net_134 : bit;
+    SIGNAL Net_1342 : bit;
     SIGNAL Net_141 : bit;
-    ATTRIBUTE placement_force OF Net_141 : SIGNAL IS "U(0,2,A)1";
-    SIGNAL Net_197 : bit;
-    ATTRIBUTE GROUND OF Net_197 : SIGNAL IS true;
+    ATTRIBUTE placement_force OF Net_141 : SIGNAL IS "U(0,5,B)2";
     SIGNAL Net_198 : bit;
-    ATTRIBUTE placement_force OF Net_198 : SIGNAL IS "U(0,3,B)0";
+    ATTRIBUTE placement_force OF Net_198 : SIGNAL IS "U(0,2,B)1";
     SIGNAL Net_24 : bit;
     SIGNAL Net_332 : bit;
     SIGNAL Net_35 : bit;
-    SIGNAL Net_422 : bit;
-    ATTRIBUTE udbclken_assigned OF Net_422 : SIGNAL IS "True";
-    ATTRIBUTE global_signal OF Net_422 : SIGNAL IS true;
-    SIGNAL Net_422_local : bit;
     SIGNAL Net_89 : bit;
     SIGNAL Rx_1(0)__PA : bit;
     SIGNAL START(0)__PA : bit;
@@ -92,6 +94,13 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     SIGNAL \ADC:mod_dat_2\ : bit;
     SIGNAL \ADC:mod_dat_3\ : bit;
     SIGNAL \ADC:mod_reset\ : bit;
+    SIGNAL \EnableTimer3:control_1\ : bit;
+    SIGNAL \EnableTimer3:control_2\ : bit;
+    SIGNAL \EnableTimer3:control_3\ : bit;
+    SIGNAL \EnableTimer3:control_4\ : bit;
+    SIGNAL \EnableTimer3:control_5\ : bit;
+    SIGNAL \EnableTimer3:control_6\ : bit;
+    SIGNAL \EnableTimer3:control_7\ : bit;
     SIGNAL \\\LCD:LCDPort(0)\\__PA\ : bit;
     SIGNAL \\\LCD:LCDPort(1)\\__PA\ : bit;
     SIGNAL \\\LCD:LCDPort(2)\\__PA\ : bit;
@@ -99,11 +108,21 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     SIGNAL \\\LCD:LCDPort(4)\\__PA\ : bit;
     SIGNAL \\\LCD:LCDPort(5)\\__PA\ : bit;
     SIGNAL \\\LCD:LCDPort(6)\\__PA\ : bit;
+    SIGNAL \ResetTimer3:control_1\ : bit;
+    SIGNAL \ResetTimer3:control_2\ : bit;
+    SIGNAL \ResetTimer3:control_3\ : bit;
+    SIGNAL \ResetTimer3:control_4\ : bit;
+    SIGNAL \ResetTimer3:control_5\ : bit;
+    SIGNAL \ResetTimer3:control_6\ : bit;
+    SIGNAL \ResetTimer3:control_7\ : bit;
     SIGNAL \T1:Net_261\ : bit;
     SIGNAL \T1:Net_57\ : bit;
     SIGNAL \Timer2:Net_261\ : bit;
     SIGNAL \Timer2:Net_51\ : bit;
     SIGNAL \Timer2:Net_57\ : bit;
+    SIGNAL \Timer3:Net_261\ : bit;
+    SIGNAL \Timer3:Net_51\ : bit;
+    SIGNAL \Timer3:Net_57\ : bit;
     SIGNAL \Timer:TimerUDB:control_0\ : bit;
     SIGNAL \Timer:TimerUDB:control_1\ : bit;
     SIGNAL \Timer:TimerUDB:control_2\ : bit;
@@ -117,7 +136,7 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     SIGNAL \Timer:TimerUDB:status_2\ : bit;
     SIGNAL \Timer:TimerUDB:status_3\ : bit;
     SIGNAL \Timer:TimerUDB:status_tc\ : bit;
-    ATTRIBUTE placement_force OF \Timer:TimerUDB:status_tc\ : SIGNAL IS "U(0,2,B)0";
+    ATTRIBUTE placement_force OF \Timer:TimerUDB:status_tc\ : SIGNAL IS "U(0,3,A)1";
     SIGNAL \Trigger_out:control_1\ : bit;
     SIGNAL \Trigger_out:control_2\ : bit;
     SIGNAL \Trigger_out:control_3\ : bit;
@@ -126,13 +145,13 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     SIGNAL \Trigger_out:control_6\ : bit;
     SIGNAL \Trigger_out:control_7\ : bit;
     SIGNAL \UART:BUART:counter_load_not\ : bit;
-    ATTRIBUTE placement_force OF \UART:BUART:counter_load_not\ : SIGNAL IS "U(0,5,B)1";
+    ATTRIBUTE placement_force OF \UART:BUART:counter_load_not\ : SIGNAL IS "U(0,4,B)1";
     SIGNAL \UART:BUART:pollcount_0\ : bit;
     ATTRIBUTE placement_force OF \UART:BUART:pollcount_0\ : SIGNAL IS "U(1,5,B)0";
     SIGNAL \UART:BUART:pollcount_1\ : bit;
     ATTRIBUTE placement_force OF \UART:BUART:pollcount_1\ : SIGNAL IS "U(1,5,A)2";
     SIGNAL \UART:BUART:rx_bitclk_enable\ : bit;
-    ATTRIBUTE placement_force OF \UART:BUART:rx_bitclk_enable\ : SIGNAL IS "U(1,5,B)2";
+    ATTRIBUTE placement_force OF \UART:BUART:rx_bitclk_enable\ : SIGNAL IS "U(1,2,B)1";
     SIGNAL \UART:BUART:rx_count7_tc\ : bit;
     SIGNAL \UART:BUART:rx_count_0\ : bit;
     SIGNAL \UART:BUART:rx_count_1\ : bit;
@@ -142,50 +161,50 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     SIGNAL \UART:BUART:rx_count_5\ : bit;
     SIGNAL \UART:BUART:rx_count_6\ : bit;
     SIGNAL \UART:BUART:rx_counter_load\ : bit;
-    ATTRIBUTE placement_force OF \UART:BUART:rx_counter_load\ : SIGNAL IS "U(1,4,B)3";
+    ATTRIBUTE placement_force OF \UART:BUART:rx_counter_load\ : SIGNAL IS "U(1,2,B)2";
     SIGNAL \UART:BUART:rx_fifofull\ : bit;
     SIGNAL \UART:BUART:rx_fifonotempty\ : bit;
     SIGNAL \UART:BUART:rx_last\ : bit;
-    ATTRIBUTE placement_force OF \UART:BUART:rx_last\ : SIGNAL IS "U(1,5,B)3";
+    ATTRIBUTE placement_force OF \UART:BUART:rx_last\ : SIGNAL IS "U(1,4,A)3";
     SIGNAL \UART:BUART:rx_load_fifo\ : bit;
-    ATTRIBUTE placement_force OF \UART:BUART:rx_load_fifo\ : SIGNAL IS "U(1,3,B)2";
+    ATTRIBUTE placement_force OF \UART:BUART:rx_load_fifo\ : SIGNAL IS "U(1,3,B)3";
     SIGNAL \UART:BUART:rx_postpoll\ : bit;
-    ATTRIBUTE placement_force OF \UART:BUART:rx_postpoll\ : SIGNAL IS "U(1,5,B)1";
+    ATTRIBUTE placement_force OF \UART:BUART:rx_postpoll\ : SIGNAL IS "U(1,4,A)2";
     SIGNAL \UART:BUART:rx_state_0\ : bit;
     ATTRIBUTE placement_force OF \UART:BUART:rx_state_0\ : SIGNAL IS "U(1,4,A)0";
     SIGNAL \UART:BUART:rx_state_2\ : bit;
-    ATTRIBUTE placement_force OF \UART:BUART:rx_state_2\ : SIGNAL IS "U(1,4,B)0";
+    ATTRIBUTE placement_force OF \UART:BUART:rx_state_2\ : SIGNAL IS "U(1,3,A)1";
     SIGNAL \UART:BUART:rx_state_3\ : bit;
-    ATTRIBUTE placement_force OF \UART:BUART:rx_state_3\ : SIGNAL IS "U(1,3,B)3";
+    ATTRIBUTE placement_force OF \UART:BUART:rx_state_3\ : SIGNAL IS "U(1,2,A)0";
     SIGNAL \UART:BUART:rx_state_stop1_reg\ : bit;
     ATTRIBUTE placement_force OF \UART:BUART:rx_state_stop1_reg\ : SIGNAL IS "U(1,3,A)0";
     SIGNAL \UART:BUART:rx_status_3\ : bit;
-    ATTRIBUTE placement_force OF \UART:BUART:rx_status_3\ : SIGNAL IS "U(1,4,B)2";
+    ATTRIBUTE placement_force OF \UART:BUART:rx_status_3\ : SIGNAL IS "U(1,3,A)2";
     SIGNAL \UART:BUART:rx_status_4\ : bit;
-    ATTRIBUTE placement_force OF \UART:BUART:rx_status_4\ : SIGNAL IS "U(1,3,A)2";
+    ATTRIBUTE placement_force OF \UART:BUART:rx_status_4\ : SIGNAL IS "U(1,4,B)2";
     SIGNAL \UART:BUART:rx_status_5\ : bit;
-    ATTRIBUTE placement_force OF \UART:BUART:rx_status_5\ : SIGNAL IS "U(1,3,A)1";
+    ATTRIBUTE placement_force OF \UART:BUART:rx_status_5\ : SIGNAL IS "U(1,3,B)1";
     SIGNAL \UART:BUART:tx_bitclk\ : bit;
-    ATTRIBUTE placement_force OF \UART:BUART:tx_bitclk\ : SIGNAL IS "U(1,2,A)0";
+    ATTRIBUTE placement_force OF \UART:BUART:tx_bitclk\ : SIGNAL IS "U(0,5,A)2";
     SIGNAL \UART:BUART:tx_bitclk_enable_pre\ : bit;
     SIGNAL \UART:BUART:tx_counter_dp\ : bit;
     SIGNAL \UART:BUART:tx_ctrl_mark_last\ : bit;
-    ATTRIBUTE placement_force OF \UART:BUART:tx_ctrl_mark_last\ : SIGNAL IS "U(1,4,A)3";
+    ATTRIBUTE placement_force OF \UART:BUART:tx_ctrl_mark_last\ : SIGNAL IS "U(1,2,B)0";
     SIGNAL \UART:BUART:tx_fifo_empty\ : bit;
     SIGNAL \UART:BUART:tx_fifo_notfull\ : bit;
     SIGNAL \UART:BUART:tx_shift_out\ : bit;
     SIGNAL \UART:BUART:tx_state_0\ : bit;
-    ATTRIBUTE placement_force OF \UART:BUART:tx_state_0\ : SIGNAL IS "U(1,2,B)3";
+    ATTRIBUTE placement_force OF \UART:BUART:tx_state_0\ : SIGNAL IS "U(0,5,B)1";
     SIGNAL \UART:BUART:tx_state_1\ : bit;
-    ATTRIBUTE placement_force OF \UART:BUART:tx_state_1\ : SIGNAL IS "U(0,4,B)3";
+    ATTRIBUTE placement_force OF \UART:BUART:tx_state_1\ : SIGNAL IS "U(0,4,A)3";
     SIGNAL \UART:BUART:tx_state_2\ : bit;
-    ATTRIBUTE placement_force OF \UART:BUART:tx_state_2\ : SIGNAL IS "U(0,2,A)2";
+    ATTRIBUTE placement_force OF \UART:BUART:tx_state_2\ : SIGNAL IS "U(0,4,B)0";
     SIGNAL \UART:BUART:tx_status_0\ : bit;
-    ATTRIBUTE placement_force OF \UART:BUART:tx_status_0\ : SIGNAL IS "U(1,5,A)1";
+    ATTRIBUTE placement_force OF \UART:BUART:tx_status_0\ : SIGNAL IS "U(0,5,B)3";
     SIGNAL \UART:BUART:tx_status_2\ : bit;
-    ATTRIBUTE placement_force OF \UART:BUART:tx_status_2\ : SIGNAL IS "U(1,4,A)1";
+    ATTRIBUTE placement_force OF \UART:BUART:tx_status_2\ : SIGNAL IS "U(0,5,A)1";
     SIGNAL \UART:BUART:txn\ : bit;
-    ATTRIBUTE placement_force OF \UART:BUART:txn\ : SIGNAL IS "U(0,2,B)3";
+    ATTRIBUTE placement_force OF \UART:BUART:txn\ : SIGNAL IS "U(0,5,A)0";
     SIGNAL \UART:Net_9\ : bit;
     ATTRIBUTE udbclken_assigned OF \UART:Net_9\ : SIGNAL IS "True";
     ATTRIBUTE global_signal OF \UART:Net_9\ : SIGNAL IS true;
@@ -215,7 +234,7 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     SIGNAL \USBUART:ep_int_7\ : bit;
     SIGNAL \USBUART:ep_int_8\ : bit;
     SIGNAL __ONE__ : bit;
-    ATTRIBUTE placement_force OF __ONE__ : SIGNAL IS "U(0,5,A)0";
+    ATTRIBUTE placement_force OF __ONE__ : SIGNAL IS "U(1,4,B)3";
     ATTRIBUTE POWER OF __ONE__ : SIGNAL IS true;
     SIGNAL __ZERO__ : bit;
     ATTRIBUTE GROUND OF __ZERO__ : SIGNAL IS true;
@@ -290,29 +309,29 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     ATTRIBUTE lib_model OF enable(0) : LABEL IS "iocell18";
     ATTRIBUTE Location OF enable(0) : LABEL IS "P5[0]";
     ATTRIBUTE lib_model OF __ONE__ : LABEL IS "macrocell1";
-    ATTRIBUTE Location OF __ONE__ : LABEL IS "U(0,5)";
+    ATTRIBUTE Location OF __ONE__ : LABEL IS "U(1,4)";
     ATTRIBUTE lib_model OF \Timer:TimerUDB:status_tc\ : LABEL IS "macrocell2";
-    ATTRIBUTE Location OF \Timer:TimerUDB:status_tc\ : LABEL IS "U(0,2)";
+    ATTRIBUTE Location OF \Timer:TimerUDB:status_tc\ : LABEL IS "U(0,3)";
     ATTRIBUTE lib_model OF Net_141 : LABEL IS "macrocell3";
-    ATTRIBUTE Location OF Net_141 : LABEL IS "U(0,2)";
+    ATTRIBUTE Location OF Net_141 : LABEL IS "U(0,5)";
     ATTRIBUTE lib_model OF \UART:BUART:counter_load_not\ : LABEL IS "macrocell4";
-    ATTRIBUTE Location OF \UART:BUART:counter_load_not\ : LABEL IS "U(0,5)";
+    ATTRIBUTE Location OF \UART:BUART:counter_load_not\ : LABEL IS "U(0,4)";
     ATTRIBUTE lib_model OF \UART:BUART:tx_status_0\ : LABEL IS "macrocell5";
-    ATTRIBUTE Location OF \UART:BUART:tx_status_0\ : LABEL IS "U(1,5)";
+    ATTRIBUTE Location OF \UART:BUART:tx_status_0\ : LABEL IS "U(0,5)";
     ATTRIBUTE lib_model OF \UART:BUART:tx_status_2\ : LABEL IS "macrocell6";
-    ATTRIBUTE Location OF \UART:BUART:tx_status_2\ : LABEL IS "U(1,4)";
+    ATTRIBUTE Location OF \UART:BUART:tx_status_2\ : LABEL IS "U(0,5)";
     ATTRIBUTE lib_model OF \UART:BUART:rx_counter_load\ : LABEL IS "macrocell7";
-    ATTRIBUTE Location OF \UART:BUART:rx_counter_load\ : LABEL IS "U(1,4)";
+    ATTRIBUTE Location OF \UART:BUART:rx_counter_load\ : LABEL IS "U(1,2)";
     ATTRIBUTE lib_model OF \UART:BUART:rx_postpoll\ : LABEL IS "macrocell8";
-    ATTRIBUTE Location OF \UART:BUART:rx_postpoll\ : LABEL IS "U(1,5)";
+    ATTRIBUTE Location OF \UART:BUART:rx_postpoll\ : LABEL IS "U(1,4)";
     ATTRIBUTE lib_model OF \UART:BUART:rx_status_4\ : LABEL IS "macrocell9";
-    ATTRIBUTE Location OF \UART:BUART:rx_status_4\ : LABEL IS "U(1,3)";
+    ATTRIBUTE Location OF \UART:BUART:rx_status_4\ : LABEL IS "U(1,4)";
     ATTRIBUTE lib_model OF \UART:BUART:rx_status_5\ : LABEL IS "macrocell10";
     ATTRIBUTE Location OF \UART:BUART:rx_status_5\ : LABEL IS "U(1,3)";
     ATTRIBUTE lib_model OF Net_1042 : LABEL IS "macrocell11";
     ATTRIBUTE Location OF Net_1042 : LABEL IS "U(0,2)";
     ATTRIBUTE lib_model OF \Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell1";
-    ATTRIBUTE Location OF \Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "U(1,2)";
+    ATTRIBUTE Location OF \Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "U(0,3)";
     ATTRIBUTE lib_model OF \Timer:TimerUDB:rstSts:stsreg\ : LABEL IS "statusicell1";
     ATTRIBUTE Location OF \Timer:TimerUDB:rstSts:stsreg\ : LABEL IS "U(0,3)";
     ATTRIBUTE lib_model OF \Timer:TimerUDB:sT24:timerdp:u0\ : LABEL IS "datapathcell1";
@@ -335,44 +354,49 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     ATTRIBUTE Location OF \USBUART:arb_int\ : LABEL IS "[IntrContainer=(0)][IntrId=(22)]";
     ATTRIBUTE Location OF \USBUART:sof_int\ : LABEL IS "[IntrContainer=(0)][IntrId=(21)]";
     ATTRIBUTE lib_model OF \UART:BUART:sTX:TxShifter:u0\ : LABEL IS "datapathcell4";
-    ATTRIBUTE Location OF \UART:BUART:sTX:TxShifter:u0\ : LABEL IS "U(1,3)";
+    ATTRIBUTE Location OF \UART:BUART:sTX:TxShifter:u0\ : LABEL IS "U(0,5)";
     ATTRIBUTE lib_model OF \UART:BUART:sTX:sCLOCK:TxBitClkGen\ : LABEL IS "datapathcell5";
-    ATTRIBUTE Location OF \UART:BUART:sTX:sCLOCK:TxBitClkGen\ : LABEL IS "U(0,5)";
+    ATTRIBUTE Location OF \UART:BUART:sTX:sCLOCK:TxBitClkGen\ : LABEL IS "U(0,4)";
     ATTRIBUTE lib_model OF \UART:BUART:sTX:TxSts\ : LABEL IS "statusicell2";
-    ATTRIBUTE Location OF \UART:BUART:sTX:TxSts\ : LABEL IS "U(1,5)";
+    ATTRIBUTE Location OF \UART:BUART:sTX:TxSts\ : LABEL IS "U(0,5)";
     ATTRIBUTE lib_model OF \UART:BUART:sRX:RxShifter:u0\ : LABEL IS "datapathcell6";
-    ATTRIBUTE Location OF \UART:BUART:sRX:RxShifter:u0\ : LABEL IS "U(1,5)";
-    ATTRIBUTE Location OF \UART:BUART:sRX:RxBitCounter\ : LABEL IS "U(1,4)";
+    ATTRIBUTE Location OF \UART:BUART:sRX:RxShifter:u0\ : LABEL IS "U(1,4)";
+    ATTRIBUTE Location OF \UART:BUART:sRX:RxBitCounter\ : LABEL IS "U(1,2)";
     ATTRIBUTE lib_model OF \UART:BUART:sRX:RxSts\ : LABEL IS "statusicell3";
     ATTRIBUTE Location OF \UART:BUART:sRX:RxSts\ : LABEL IS "U(1,3)";
     ATTRIBUTE Location OF \Timer2:TimerHW\ : LABEL IS "F(Timer,1)";
     ATTRIBUTE lib_model OF \Trigger_out:Sync:ctrl_reg\ : LABEL IS "controlcell2";
     ATTRIBUTE Location OF \Trigger_out:Sync:ctrl_reg\ : LABEL IS "U(0,2)";
     ATTRIBUTE Location OF \T1:TimerHW\ : LABEL IS "F(Timer,0)";
+    ATTRIBUTE lib_model OF \EnableTimer3:Sync:ctrl_reg\ : LABEL IS "controlcell3";
+    ATTRIBUTE Location OF \EnableTimer3:Sync:ctrl_reg\ : LABEL IS "U(1,4)";
+    ATTRIBUTE Location OF \Timer3:TimerHW\ : LABEL IS "F(Timer,2)";
+    ATTRIBUTE lib_model OF \ResetTimer3:Sync:ctrl_reg\ : LABEL IS "controlcell4";
+    ATTRIBUTE Location OF \ResetTimer3:Sync:ctrl_reg\ : LABEL IS "U(0,4)";
     ATTRIBUTE lib_model OF Net_198 : LABEL IS "macrocell12";
-    ATTRIBUTE Location OF Net_198 : LABEL IS "U(0,3)";
+    ATTRIBUTE Location OF Net_198 : LABEL IS "U(0,2)";
     ATTRIBUTE lib_model OF \UART:BUART:txn\ : LABEL IS "macrocell13";
-    ATTRIBUTE Location OF \UART:BUART:txn\ : LABEL IS "U(0,2)";
+    ATTRIBUTE Location OF \UART:BUART:txn\ : LABEL IS "U(0,5)";
     ATTRIBUTE lib_model OF \UART:BUART:tx_state_1\ : LABEL IS "macrocell14";
     ATTRIBUTE Location OF \UART:BUART:tx_state_1\ : LABEL IS "U(0,4)";
     ATTRIBUTE lib_model OF \UART:BUART:tx_state_0\ : LABEL IS "macrocell15";
-    ATTRIBUTE Location OF \UART:BUART:tx_state_0\ : LABEL IS "U(1,2)";
+    ATTRIBUTE Location OF \UART:BUART:tx_state_0\ : LABEL IS "U(0,5)";
     ATTRIBUTE lib_model OF \UART:BUART:tx_state_2\ : LABEL IS "macrocell16";
-    ATTRIBUTE Location OF \UART:BUART:tx_state_2\ : LABEL IS "U(0,2)";
+    ATTRIBUTE Location OF \UART:BUART:tx_state_2\ : LABEL IS "U(0,4)";
     ATTRIBUTE lib_model OF \UART:BUART:tx_bitclk\ : LABEL IS "macrocell17";
-    ATTRIBUTE Location OF \UART:BUART:tx_bitclk\ : LABEL IS "U(1,2)";
+    ATTRIBUTE Location OF \UART:BUART:tx_bitclk\ : LABEL IS "U(0,5)";
     ATTRIBUTE lib_model OF \UART:BUART:tx_ctrl_mark_last\ : LABEL IS "macrocell18";
-    ATTRIBUTE Location OF \UART:BUART:tx_ctrl_mark_last\ : LABEL IS "U(1,4)";
+    ATTRIBUTE Location OF \UART:BUART:tx_ctrl_mark_last\ : LABEL IS "U(1,2)";
     ATTRIBUTE lib_model OF \UART:BUART:rx_state_0\ : LABEL IS "macrocell19";
     ATTRIBUTE Location OF \UART:BUART:rx_state_0\ : LABEL IS "U(1,4)";
     ATTRIBUTE lib_model OF \UART:BUART:rx_load_fifo\ : LABEL IS "macrocell20";
     ATTRIBUTE Location OF \UART:BUART:rx_load_fifo\ : LABEL IS "U(1,3)";
     ATTRIBUTE lib_model OF \UART:BUART:rx_state_3\ : LABEL IS "macrocell21";
-    ATTRIBUTE Location OF \UART:BUART:rx_state_3\ : LABEL IS "U(1,3)";
+    ATTRIBUTE Location OF \UART:BUART:rx_state_3\ : LABEL IS "U(1,2)";
     ATTRIBUTE lib_model OF \UART:BUART:rx_state_2\ : LABEL IS "macrocell22";
-    ATTRIBUTE Location OF \UART:BUART:rx_state_2\ : LABEL IS "U(1,4)";
+    ATTRIBUTE Location OF \UART:BUART:rx_state_2\ : LABEL IS "U(1,3)";
     ATTRIBUTE lib_model OF \UART:BUART:rx_bitclk_enable\ : LABEL IS "macrocell23";
-    ATTRIBUTE Location OF \UART:BUART:rx_bitclk_enable\ : LABEL IS "U(1,5)";
+    ATTRIBUTE Location OF \UART:BUART:rx_bitclk_enable\ : LABEL IS "U(1,2)";
     ATTRIBUTE lib_model OF \UART:BUART:rx_state_stop1_reg\ : LABEL IS "macrocell24";
     ATTRIBUTE Location OF \UART:BUART:rx_state_stop1_reg\ : LABEL IS "U(1,3)";
     ATTRIBUTE lib_model OF \UART:BUART:pollcount_1\ : LABEL IS "macrocell25";
@@ -380,9 +404,9 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     ATTRIBUTE lib_model OF \UART:BUART:pollcount_0\ : LABEL IS "macrocell26";
     ATTRIBUTE Location OF \UART:BUART:pollcount_0\ : LABEL IS "U(1,5)";
     ATTRIBUTE lib_model OF \UART:BUART:rx_status_3\ : LABEL IS "macrocell27";
-    ATTRIBUTE Location OF \UART:BUART:rx_status_3\ : LABEL IS "U(1,4)";
+    ATTRIBUTE Location OF \UART:BUART:rx_status_3\ : LABEL IS "U(1,3)";
     ATTRIBUTE lib_model OF \UART:BUART:rx_last\ : LABEL IS "macrocell28";
-    ATTRIBUTE Location OF \UART:BUART:rx_last\ : LABEL IS "U(1,5)";
+    ATTRIBUTE Location OF \UART:BUART:rx_last\ : LABEL IS "U(1,4)";
     COMPONENT clockblockcell
         PORT (
             dclk_0 : OUT std_ulogic;
@@ -773,8 +797,8 @@ BEGIN
             dsi_glb_div => open,
             dclk_glb_0 => \ADC:Net_93\,
             dclk_0 => \ADC:Net_93_local\,
-            dclk_glb_1 => Net_422,
-            dclk_1 => Net_422_local,
+            dclk_glb_1 => Net_1322,
+            dclk_1 => Net_1322_local,
             dclk_glb_2 => \UART:Net_9\,
             dclk_2 => \UART:Net_9_local\,
             aclk_glb_0 => \ADC:Net_488\,
@@ -2116,7 +2140,7 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => Net_422,
+            clock => Net_1322,
             control_7 => \Timer:TimerUDB:control_7\,
             control_6 => \Timer:TimerUDB:control_6\,
             control_5 => \Timer:TimerUDB:control_5\,
@@ -2135,7 +2159,7 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => Net_422,
+            clock => Net_1322,
             status_6 => open,
             status_5 => open,
             status_4 => open,
@@ -2172,7 +2196,7 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => Net_422,
+            clock => Net_1322,
             cs_addr_1 => \Timer:TimerUDB:control_7\,
             cs_addr_0 => \Timer:TimerUDB:per_zero\,
             busclk => ClockBlock_BUS_CLK,
@@ -2218,7 +2242,7 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => Net_422,
+            clock => Net_1322,
             cs_addr_1 => \Timer:TimerUDB:control_7\,
             cs_addr_0 => \Timer:TimerUDB:per_zero\,
             busclk => ClockBlock_BUS_CLK,
@@ -2277,7 +2301,7 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => Net_422,
+            clock => Net_1322,
             cs_addr_1 => \Timer:TimerUDB:control_7\,
             cs_addr_0 => \Timer:TimerUDB:per_zero\,
             z0_comb => \Timer:TimerUDB:per_zero\,
@@ -2658,6 +2682,57 @@ BEGIN
             cmp => \T1:Net_261\,
             irq => \T1:Net_57\);
 
+    \EnableTimer3:Sync:ctrl_reg\:controlcell
+        GENERIC MAP(
+            cy_ctrl_mode_0 => "00000000",
+            cy_ctrl_mode_1 => "00000000",
+            cy_ext_reset => 0,
+            cy_force_order => 1,
+            cy_init_value => "00000001",
+            clken_mode => 1)
+        PORT MAP(
+            control_7 => \EnableTimer3:control_7\,
+            control_6 => \EnableTimer3:control_6\,
+            control_5 => \EnableTimer3:control_5\,
+            control_4 => \EnableTimer3:control_4\,
+            control_3 => \EnableTimer3:control_3\,
+            control_2 => \EnableTimer3:control_2\,
+            control_1 => \EnableTimer3:control_1\,
+            control_0 => Net_1342,
+            busclk => ClockBlock_BUS_CLK);
+
+    \Timer3:TimerHW\:timercell
+        GENERIC MAP(
+            cy_registers => "")
+        PORT MAP(
+            clock => \ClockBlock.dclk_glb_ff_1__sig\,
+            kill => open,
+            enable => Net_1342,
+            capture => open,
+            timer_reset => Net_1339,
+            tc => \Timer3:Net_51\,
+            cmp => \Timer3:Net_261\,
+            irq => \Timer3:Net_57\);
+
+    \ResetTimer3:Sync:ctrl_reg\:controlcell
+        GENERIC MAP(
+            cy_ctrl_mode_0 => "00000000",
+            cy_ctrl_mode_1 => "00000000",
+            cy_ext_reset => 0,
+            cy_force_order => 1,
+            cy_init_value => "00000000",
+            clken_mode => 1)
+        PORT MAP(
+            control_7 => \ResetTimer3:control_7\,
+            control_6 => \ResetTimer3:control_6\,
+            control_5 => \ResetTimer3:control_5\,
+            control_4 => \ResetTimer3:control_4\,
+            control_3 => \ResetTimer3:control_3\,
+            control_2 => \ResetTimer3:control_2\,
+            control_1 => \ResetTimer3:control_1\,
+            control_0 => Net_1339,
+            busclk => ClockBlock_BUS_CLK);
+
     Net_198:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1)",
@@ -2666,7 +2741,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_198,
-            clock_0 => Net_422,
+            clock_0 => Net_1322,
             main_0 => \Timer:TimerUDB:control_7\,
             main_1 => \Timer:TimerUDB:per_zero\);
 

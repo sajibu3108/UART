@@ -1,5 +1,5 @@
 -- Project:   Design01
--- Generated: 05/09/2017 16:14:48
+-- Generated: 05/09/2017 17:26:24
 -- PSoC Creator  4.0 Update 1
 
 ENTITY Design01 IS
@@ -50,18 +50,20 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     ATTRIBUTE global_signal OF Net_1238 : SIGNAL IS true;
     SIGNAL Net_1238_local : bit;
     SIGNAL Net_1257 : bit;
+    SIGNAL Net_1322 : bit;
+    ATTRIBUTE udbclken_assigned OF Net_1322 : SIGNAL IS "True";
+    ATTRIBUTE global_signal OF Net_1322 : SIGNAL IS true;
+    SIGNAL Net_1322_local : bit;
+    SIGNAL Net_1337 : bit;
+    ATTRIBUTE GROUND OF Net_1337 : SIGNAL IS true;
+    SIGNAL Net_1339 : bit;
     SIGNAL Net_134 : bit;
+    SIGNAL Net_1342 : bit;
     SIGNAL Net_141 : bit;
-    SIGNAL Net_197 : bit;
-    ATTRIBUTE GROUND OF Net_197 : SIGNAL IS true;
     SIGNAL Net_198 : bit;
     SIGNAL Net_24 : bit;
     SIGNAL Net_332 : bit;
     SIGNAL Net_35 : bit;
-    SIGNAL Net_422 : bit;
-    ATTRIBUTE udbclken_assigned OF Net_422 : SIGNAL IS "True";
-    ATTRIBUTE global_signal OF Net_422 : SIGNAL IS true;
-    SIGNAL Net_422_local : bit;
     SIGNAL Net_89 : bit;
     SIGNAL Rx_1(0)__PA : bit;
     SIGNAL START(0)__PA : bit;
@@ -89,6 +91,13 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     SIGNAL \ADC:mod_dat_2\ : bit;
     SIGNAL \ADC:mod_dat_3\ : bit;
     SIGNAL \ADC:mod_reset\ : bit;
+    SIGNAL \EnableTimer3:control_1\ : bit;
+    SIGNAL \EnableTimer3:control_2\ : bit;
+    SIGNAL \EnableTimer3:control_3\ : bit;
+    SIGNAL \EnableTimer3:control_4\ : bit;
+    SIGNAL \EnableTimer3:control_5\ : bit;
+    SIGNAL \EnableTimer3:control_6\ : bit;
+    SIGNAL \EnableTimer3:control_7\ : bit;
     SIGNAL \\\LCD:LCDPort(0)\\__PA\ : bit;
     SIGNAL \\\LCD:LCDPort(1)\\__PA\ : bit;
     SIGNAL \\\LCD:LCDPort(2)\\__PA\ : bit;
@@ -96,11 +105,21 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     SIGNAL \\\LCD:LCDPort(4)\\__PA\ : bit;
     SIGNAL \\\LCD:LCDPort(5)\\__PA\ : bit;
     SIGNAL \\\LCD:LCDPort(6)\\__PA\ : bit;
+    SIGNAL \ResetTimer3:control_1\ : bit;
+    SIGNAL \ResetTimer3:control_2\ : bit;
+    SIGNAL \ResetTimer3:control_3\ : bit;
+    SIGNAL \ResetTimer3:control_4\ : bit;
+    SIGNAL \ResetTimer3:control_5\ : bit;
+    SIGNAL \ResetTimer3:control_6\ : bit;
+    SIGNAL \ResetTimer3:control_7\ : bit;
     SIGNAL \T1:Net_261\ : bit;
     SIGNAL \T1:Net_57\ : bit;
     SIGNAL \Timer2:Net_261\ : bit;
     SIGNAL \Timer2:Net_51\ : bit;
     SIGNAL \Timer2:Net_57\ : bit;
+    SIGNAL \Timer3:Net_261\ : bit;
+    SIGNAL \Timer3:Net_51\ : bit;
+    SIGNAL \Timer3:Net_57\ : bit;
     SIGNAL \Timer:TimerUDB:control_0\ : bit;
     SIGNAL \Timer:TimerUDB:control_1\ : bit;
     SIGNAL \Timer:TimerUDB:control_2\ : bit;
@@ -283,6 +302,8 @@ ARCHITECTURE __DEFAULT__ OF Design01 IS
     ATTRIBUTE lib_model OF \UART:BUART:sRX:RxShifter:u0\ : LABEL IS "datapathcell6";
     ATTRIBUTE lib_model OF \UART:BUART:sRX:RxSts\ : LABEL IS "statusicell3";
     ATTRIBUTE lib_model OF \Trigger_out:Sync:ctrl_reg\ : LABEL IS "controlcell2";
+    ATTRIBUTE lib_model OF \EnableTimer3:Sync:ctrl_reg\ : LABEL IS "controlcell3";
+    ATTRIBUTE lib_model OF \ResetTimer3:Sync:ctrl_reg\ : LABEL IS "controlcell4";
     ATTRIBUTE lib_model OF Net_198 : LABEL IS "macrocell12";
     ATTRIBUTE lib_model OF \UART:BUART:txn\ : LABEL IS "macrocell13";
     ATTRIBUTE lib_model OF \UART:BUART:tx_state_1\ : LABEL IS "macrocell14";
@@ -712,8 +733,8 @@ BEGIN
             dsi_glb_div => open,
             dclk_glb_0 => \ADC:Net_93\,
             dclk_0 => \ADC:Net_93_local\,
-            dclk_glb_1 => Net_422,
-            dclk_1 => Net_422_local,
+            dclk_glb_1 => Net_1322,
+            dclk_1 => Net_1322_local,
             dclk_glb_2 => \UART:Net_9\,
             dclk_2 => \UART:Net_9_local\,
             aclk_glb_0 => \ADC:Net_488\,
@@ -2055,7 +2076,7 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => Net_422,
+            clock => Net_1322,
             control_7 => \Timer:TimerUDB:control_7\,
             control_6 => \Timer:TimerUDB:control_6\,
             control_5 => \Timer:TimerUDB:control_5\,
@@ -2074,7 +2095,7 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => Net_422,
+            clock => Net_1322,
             status_6 => open,
             status_5 => open,
             status_4 => open,
@@ -2111,7 +2132,7 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => Net_422,
+            clock => Net_1322,
             cs_addr_1 => \Timer:TimerUDB:control_7\,
             cs_addr_0 => \Timer:TimerUDB:per_zero\,
             busclk => ClockBlock_BUS_CLK,
@@ -2157,7 +2178,7 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => Net_422,
+            clock => Net_1322,
             cs_addr_1 => \Timer:TimerUDB:control_7\,
             cs_addr_0 => \Timer:TimerUDB:per_zero\,
             busclk => ClockBlock_BUS_CLK,
@@ -2216,7 +2237,7 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => Net_422,
+            clock => Net_1322,
             cs_addr_1 => \Timer:TimerUDB:control_7\,
             cs_addr_0 => \Timer:TimerUDB:per_zero\,
             z0_comb => \Timer:TimerUDB:per_zero\,
@@ -2597,6 +2618,57 @@ BEGIN
             cmp => \T1:Net_261\,
             irq => \T1:Net_57\);
 
+    \EnableTimer3:Sync:ctrl_reg\:controlcell
+        GENERIC MAP(
+            cy_ctrl_mode_0 => "00000000",
+            cy_ctrl_mode_1 => "00000000",
+            cy_ext_reset => 0,
+            cy_force_order => 1,
+            cy_init_value => "00000001",
+            clken_mode => 1)
+        PORT MAP(
+            control_7 => \EnableTimer3:control_7\,
+            control_6 => \EnableTimer3:control_6\,
+            control_5 => \EnableTimer3:control_5\,
+            control_4 => \EnableTimer3:control_4\,
+            control_3 => \EnableTimer3:control_3\,
+            control_2 => \EnableTimer3:control_2\,
+            control_1 => \EnableTimer3:control_1\,
+            control_0 => Net_1342,
+            busclk => ClockBlock_BUS_CLK);
+
+    \Timer3:TimerHW\:timercell
+        GENERIC MAP(
+            cy_registers => "")
+        PORT MAP(
+            clock => \ClockBlock.dclk_glb_ff_1__sig\,
+            kill => open,
+            enable => Net_1342,
+            capture => open,
+            timer_reset => Net_1339,
+            tc => \Timer3:Net_51\,
+            cmp => \Timer3:Net_261\,
+            irq => \Timer3:Net_57\);
+
+    \ResetTimer3:Sync:ctrl_reg\:controlcell
+        GENERIC MAP(
+            cy_ctrl_mode_0 => "00000000",
+            cy_ctrl_mode_1 => "00000000",
+            cy_ext_reset => 0,
+            cy_force_order => 1,
+            cy_init_value => "00000000",
+            clken_mode => 1)
+        PORT MAP(
+            control_7 => \ResetTimer3:control_7\,
+            control_6 => \ResetTimer3:control_6\,
+            control_5 => \ResetTimer3:control_5\,
+            control_4 => \ResetTimer3:control_4\,
+            control_3 => \ResetTimer3:control_3\,
+            control_2 => \ResetTimer3:control_2\,
+            control_1 => \ResetTimer3:control_1\,
+            control_0 => Net_1339,
+            busclk => ClockBlock_BUS_CLK);
+
     Net_198:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1)",
@@ -2605,7 +2677,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => Net_198,
-            clock_0 => Net_422,
+            clock_0 => Net_1322,
             main_0 => \Timer:TimerUDB:control_7\,
             main_1 => \Timer:TimerUDB:per_zero\);
 

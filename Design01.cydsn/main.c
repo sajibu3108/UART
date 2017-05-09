@@ -21,6 +21,9 @@ float angulo = 0.0;
 int   ContInt=0;
 
 int value_counter = 0;
+int tiempoInterrupcion=0;
+
+
 float distancia = 0;
 char imp[9];
 
@@ -35,8 +38,15 @@ CY_ISR_PROTO(isr_10_Handler);
 // Interrupt handler declaration
 CY_ISR(isr_10_Handler)
 {
-    // Denotes interrupt begin
+    //Denotes interrupt begin
+    
+    
+//    ResetTimer3_Write(1);
+//    CyDelayUs(100);
+//    ResetTimer3_Write(0);    
+//    EnableTimer3_Write(1);
 
+    
     ADC_IsEndConversion(ADC_WAIT_FOR_RESULT);
     data = ADC_GetResult16();
     volts = ADC_CountsTo_Volts(data);
@@ -53,6 +63,14 @@ CY_ISR(isr_10_Handler)
         ContInt=0;
     }
     ContInt++;
+    //EnableTimer3_Write(0); 
+//    tiempoInterrupcion=65535-Timer3_ReadCounter();
+//    
+//    ResetTimer3_Write(0);
+    
+      
+    
+    
    
 }
 
@@ -86,10 +104,10 @@ int main(void)
     // Infinite loop
     for(;;)
     {  
-       sprintf(displayStrLCD,"%.2f r %.1f cm",volts, distancia);
-       sprintf(displayStrUART,"%.2f, %.1f",angulo,distancia);
-       LCD_Position(1,0);
-       LCD_PrintString(displayStrLCD);
+//       sprintf(displayStrLCD,"%.2f r %.1f cm",volts, distancia);
+       sprintf(displayStrUART,"%.2f, %.1f, %1d",angulo,distancia,tiempoInterrupcion);
+//       LCD_Position(1,0);
+//       LCD_PrintString(displayStrLCD);
     
        UART_PutString(displayStrUART);
        UART_PutString("\n\r");

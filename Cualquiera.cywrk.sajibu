@@ -28,6 +28,10 @@
 <v>Cualquiera\Design01\Generated_Source\PSoC5\echo\echo.h</v>
 <v>Cualquiera\Design01\Generated_Source\PSoC5\echo\echo_aliases.h</v>
 <v>Cualquiera\Design01\Generated_Source\PSoC5\Enable</v>
+<v>Cualquiera\Design01\Generated_Source\PSoC5\EnableTimer3</v>
+<v>Cualquiera\Design01\Generated_Source\PSoC5\EnableTimer3\EnableTimer3.c</v>
+<v>Cualquiera\Design01\Generated_Source\PSoC5\EnableTimer3\EnableTimer3.h</v>
+<v>Cualquiera\Design01\Generated_Source\PSoC5\EnableTimer3\EnableTimer3_PM.c</v>
 <v>Cualquiera\Design01\Generated_Source\PSoC5\In0</v>
 <v>Cualquiera\Design01\Generated_Source\PSoC5\In0\In0.c</v>
 <v>Cualquiera\Design01\Generated_Source\PSoC5\In0\In0.h</v>
@@ -36,10 +40,18 @@
 <v>Cualquiera\Design01\Generated_Source\PSoC5\In1\In1.c</v>
 <v>Cualquiera\Design01\Generated_Source\PSoC5\In1\In1.h</v>
 <v>Cualquiera\Design01\Generated_Source\PSoC5\In1\In1_aliases.h</v>
+<v>Cualquiera\Design01\Generated_Source\PSoC5\ResetTimer3</v>
+<v>Cualquiera\Design01\Generated_Source\PSoC5\ResetTimer3\ResetTimer3.c</v>
+<v>Cualquiera\Design01\Generated_Source\PSoC5\ResetTimer3\ResetTimer3.h</v>
+<v>Cualquiera\Design01\Generated_Source\PSoC5\ResetTimer3\ResetTimer3_PM.c</v>
 <v>Cualquiera\Design01\Generated_Source\PSoC5\Timer2</v>
 <v>Cualquiera\Design01\Generated_Source\PSoC5\Timer2\Timer2.c</v>
 <v>Cualquiera\Design01\Generated_Source\PSoC5\Timer2\Timer2.h</v>
 <v>Cualquiera\Design01\Generated_Source\PSoC5\Timer2\Timer2_PM.c</v>
+<v>Cualquiera\Design01\Generated_Source\PSoC5\Timer3</v>
+<v>Cualquiera\Design01\Generated_Source\PSoC5\Timer3\Timer3.c</v>
+<v>Cualquiera\Design01\Generated_Source\PSoC5\Timer3\Timer3.h</v>
+<v>Cualquiera\Design01\Generated_Source\PSoC5\Timer3\Timer3_PM.c</v>
 <v>Cualquiera\Design01\Generated_Source\PSoC5\Trigger</v>
 <v>Cualquiera\Design01\Generated_Source\PSoC5\Trigger\Trigger.c</v>
 <v>Cualquiera\Design01\Generated_Source\PSoC5\Trigger\Trigger.h</v>
@@ -150,6 +162,8 @@
 <v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
 <v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
 <v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\echo.lst</v>
+<v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\EnableTimer3.lst</v>
+<v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\EnableTimer3_PM.lst</v>
 <v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\In0.lst</v>
 <v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\In1.lst</v>
 <v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\isr_10.lst</v>
@@ -158,6 +172,8 @@
 <v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_PM.lst</v>
 <v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
 <v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\reloj1.lst</v>
+<v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\ResetTimer3.lst</v>
+<v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\ResetTimer3_PM.lst</v>
 <v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\START.lst</v>
 <v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\T1.lst</v>
 <v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\T1_PM.lst</v>
@@ -166,6 +182,8 @@
 <v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\Timer_PM.lst</v>
 <v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\Timer2.lst</v>
 <v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\Timer2_PM.lst</v>
+<v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\Timer3.lst</v>
+<v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\Timer3_PM.lst</v>
 <v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\Trigger.lst</v>
 <v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\Trigger_out.lst</v>
 <v>Cualquiera\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\Trigger_out_PM.lst</v>
@@ -222,7 +240,8 @@
 <v>Cualquiera\Design01\cy_isr_v1_70.pdf</v>
 <v>Cualquiera\Design01\cy_pins_v2_20</v>
 <v>Cualquiera\Design01\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>Cualquiera\Design01\CyControlReg_v1_80.pdf</v>
+<v>Cualquiera\Design01\CyControlReg_v1_80</v>
+<v>Cualquiera\Design01\CyControlReg_v1_80\CyControlReg_v1_80.pdf</v>
 <v>Cualquiera\Design01\ExtInverter_v1_0</v>
 <v>Cualquiera\Design01\ExtInverter_v1_0\ExtInverter_v1_0.pdf</v>
 <v>Cualquiera\Design01\Gnd_v1_0</v>

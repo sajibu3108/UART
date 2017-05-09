@@ -94,6 +94,15 @@
   <file name="C:\Users\sajibu\Desktop\Proyectos PSoC\UART\Design01.cydsn\codegentemp\T1.c" value="SOURCE_C;CortexM3;;;;T1" />
   <file name="C:\Users\sajibu\Desktop\Proyectos PSoC\UART\Design01.cydsn\codegentemp\T1.h" value="HEADER;;;;;T1" />
   <file name="C:\Users\sajibu\Desktop\Proyectos PSoC\UART\Design01.cydsn\codegentemp\T1_PM.c" value="SOURCE_C;CortexM3;;;;T1" />
+  <file name="C:\Users\sajibu\Desktop\Proyectos PSoC\UART\Design01.cydsn\codegentemp\EnableTimer3.h" value="HEADER;;;;;EnableTimer3" />
+  <file name="C:\Users\sajibu\Desktop\Proyectos PSoC\UART\Design01.cydsn\codegentemp\EnableTimer3.c" value="SOURCE_C;CortexM3;;;;EnableTimer3" />
+  <file name="C:\Users\sajibu\Desktop\Proyectos PSoC\UART\Design01.cydsn\codegentemp\EnableTimer3_PM.c" value="SOURCE_C;CortexM3;;;;EnableTimer3" />
+  <file name="C:\Users\sajibu\Desktop\Proyectos PSoC\UART\Design01.cydsn\codegentemp\Timer3.c" value="SOURCE_C;CortexM3;;;;Timer3" />
+  <file name="C:\Users\sajibu\Desktop\Proyectos PSoC\UART\Design01.cydsn\codegentemp\Timer3.h" value="HEADER;;;;;Timer3" />
+  <file name="C:\Users\sajibu\Desktop\Proyectos PSoC\UART\Design01.cydsn\codegentemp\Timer3_PM.c" value="SOURCE_C;CortexM3;;;;Timer3" />
+  <file name="C:\Users\sajibu\Desktop\Proyectos PSoC\UART\Design01.cydsn\codegentemp\ResetTimer3.h" value="HEADER;;;;;ResetTimer3" />
+  <file name="C:\Users\sajibu\Desktop\Proyectos PSoC\UART\Design01.cydsn\codegentemp\ResetTimer3.c" value="SOURCE_C;CortexM3;;;;ResetTimer3" />
+  <file name="C:\Users\sajibu\Desktop\Proyectos PSoC\UART\Design01.cydsn\codegentemp\ResetTimer3_PM.c" value="SOURCE_C;CortexM3;;;;ResetTimer3" />
   <file name="C:\Users\sajibu\Desktop\Proyectos PSoC\UART\Design01.cydsn\codegentemp\ADC_AMux.c" value="SOURCE_C;CortexM3;;;;ADC_AMux" />
   <file name="C:\Users\sajibu\Desktop\Proyectos PSoC\UART\Design01.cydsn\codegentemp\ADC_AMux.h" value="HEADER;;;;;ADC_AMux" />
   <file name="C:\Users\sajibu\Desktop\Proyectos PSoC\UART\Design01.cydsn\codegentemp\ADC_Ext_CP_Clk.c" value="SOURCE_C;CortexM3;;;;ADC_Ext_CP_Clk" />

@@ -1,5 +1,5 @@
 # Design01
-# 2017-05-09 22:14:50Z
+# 2017-05-09 23:26:25Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -31,18 +31,18 @@ set_io "echo(0)" iocell 1 7
 set_io "In1(0)" iocell 5 2
 set_io "In0(0)" iocell 5 6
 set_io "enable(0)" iocell 5 0
-set_location "__ONE__" 0 5 0 0
-set_location "\Timer:TimerUDB:status_tc\" 0 2 1 0
-set_location "Net_141" 0 2 0 1
-set_location "\UART:BUART:counter_load_not\" 0 5 1 1
-set_location "\UART:BUART:tx_status_0\" 1 5 0 1
-set_location "\UART:BUART:tx_status_2\" 1 4 0 1
-set_location "\UART:BUART:rx_counter_load\" 1 4 1 3
-set_location "\UART:BUART:rx_postpoll\" 1 5 1 1
-set_location "\UART:BUART:rx_status_4\" 1 3 0 2
-set_location "\UART:BUART:rx_status_5\" 1 3 0 1
-set_location "Net_1042" 0 2 0 0
-set_location "\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\" 1 2 6
+set_location "__ONE__" 1 4 1 3
+set_location "\Timer:TimerUDB:status_tc\" 0 3 0 1
+set_location "Net_141" 0 5 1 2
+set_location "\UART:BUART:counter_load_not\" 0 4 1 1
+set_location "\UART:BUART:tx_status_0\" 0 5 1 3
+set_location "\UART:BUART:tx_status_2\" 0 5 0 1
+set_location "\UART:BUART:rx_counter_load\" 1 2 1 2
+set_location "\UART:BUART:rx_postpoll\" 1 4 0 2
+set_location "\UART:BUART:rx_status_4\" 1 4 1 2
+set_location "\UART:BUART:rx_status_5\" 1 3 1 1
+set_location "Net_1042" 0 2 1 2
+set_location "\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\" 0 3 6
 set_location "\Timer:TimerUDB:rstSts:stsreg\" 0 3 4
 set_location "\Timer:TimerUDB:sT24:timerdp:u0\" 1 2 2
 set_location "\Timer:TimerUDB:sT24:timerdp:u1\" 0 2 2
@@ -60,29 +60,32 @@ set_location "\USBUART:ep_0\" interrupt -1 -1 24
 set_location "\USBUART:bus_reset\" interrupt -1 -1 23
 set_location "\USBUART:arb_int\" interrupt -1 -1 22
 set_location "\USBUART:sof_int\" interrupt -1 -1 21
-set_location "\UART:BUART:sTX:TxShifter:u0\" 1 3 2
-set_location "\UART:BUART:sTX:sCLOCK:TxBitClkGen\" 0 5 2
-set_location "\UART:BUART:sTX:TxSts\" 1 5 4
-set_location "\UART:BUART:sRX:RxShifter:u0\" 1 5 2
-set_location "\UART:BUART:sRX:RxBitCounter\" 1 4 7
+set_location "\UART:BUART:sTX:TxShifter:u0\" 0 5 2
+set_location "\UART:BUART:sTX:sCLOCK:TxBitClkGen\" 0 4 2
+set_location "\UART:BUART:sTX:TxSts\" 0 5 4
+set_location "\UART:BUART:sRX:RxShifter:u0\" 1 4 2
+set_location "\UART:BUART:sRX:RxBitCounter\" 1 2 7
 set_location "\UART:BUART:sRX:RxSts\" 1 3 4
 set_location "\Timer2:TimerHW\" timercell -1 -1 1
 set_location "\Trigger_out:Sync:ctrl_reg\" 0 2 6
 set_location "\T1:TimerHW\" timercell -1 -1 0
-set_location "Net_198" 0 3 1 0
-set_location "\UART:BUART:txn\" 0 2 1 3
-set_location "\UART:BUART:tx_state_1\" 0 4 1 3
-set_location "\UART:BUART:tx_state_0\" 1 2 1 3
-set_location "\UART:BUART:tx_state_2\" 0 2 0 2
-set_location "\UART:BUART:tx_bitclk\" 1 2 0 0
-set_location "\UART:BUART:tx_ctrl_mark_last\" 1 4 0 3
+set_location "\EnableTimer3:Sync:ctrl_reg\" 1 4 6
+set_location "\Timer3:TimerHW\" timercell -1 -1 2
+set_location "\ResetTimer3:Sync:ctrl_reg\" 0 4 6
+set_location "Net_198" 0 2 1 1
+set_location "\UART:BUART:txn\" 0 5 0 0
+set_location "\UART:BUART:tx_state_1\" 0 4 0 3
+set_location "\UART:BUART:tx_state_0\" 0 5 1 1
+set_location "\UART:BUART:tx_state_2\" 0 4 1 0
+set_location "\UART:BUART:tx_bitclk\" 0 5 0 2
+set_location "\UART:BUART:tx_ctrl_mark_last\" 1 2 1 0
 set_location "\UART:BUART:rx_state_0\" 1 4 0 0
-set_location "\UART:BUART:rx_load_fifo\" 1 3 1 2
-set_location "\UART:BUART:rx_state_3\" 1 3 1 3
-set_location "\UART:BUART:rx_state_2\" 1 4 1 0
-set_location "\UART:BUART:rx_bitclk_enable\" 1 5 1 2
+set_location "\UART:BUART:rx_load_fifo\" 1 3 1 3
+set_location "\UART:BUART:rx_state_3\" 1 2 0 0
+set_location "\UART:BUART:rx_state_2\" 1 3 0 1
+set_location "\UART:BUART:rx_bitclk_enable\" 1 2 1 1
 set_location "\UART:BUART:rx_state_stop1_reg\" 1 3 0 0
 set_location "\UART:BUART:pollcount_1\" 1 5 0 2
 set_location "\UART:BUART:pollcount_0\" 1 5 1 0
-set_location "\UART:BUART:rx_status_3\" 1 4 1 2
-set_location "\UART:BUART:rx_last\" 1 5 1 3
+set_location "\UART:BUART:rx_status_3\" 1 3 0 2
+set_location "\UART:BUART:rx_last\" 1 4 0 3

@@ -1,6 +1,6 @@
 // ======================================================================
 // Design01.v generated from TopDesign.cysch
-// 05/09/2017 at 16:14
+// 05/09/2017 at 17:26
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1184,9 +1184,97 @@ module Timer_v2_70_6 (
 
 endmodule
 
+// Timer_v2_70(CaptureAlternatingFall=false, CaptureAlternatingRise=false, CaptureCount=2, CaptureCounterEnabled=false, CaptureInputEnabled=false, CaptureMode=0, CONTROL3=1, ControlRegRemoved=0, CtlModeReplacementString=SyncCtl, CyGetRegReplacementString=CY_GET_REG16, CySetRegReplacementString=CY_SET_REG16, DeviceFamily=PSoC5, EnableMode=2, FF16=true, FF8=false, FixedFunction=true, FixedFunctionUsed=1, HWCaptureCounterEnabled=false, InterruptOnCapture=false, InterruptOnFIFOFull=false, InterruptOnTC=false, IntOnCapture=0, IntOnFIFOFull=0, IntOnTC=0, NumberOfCaptures=1, param45=1, Period=65535, RegDefReplacementString=reg16, RegSizeReplacementString=uint16, Resolution=16, RstStatusReplacementString=rstSts, RunMode=0, SiliconRevision=0, SoftwareCaptureModeEnabled=false, SoftwareTriggerModeEnabled=false, TriggerInputEnabled=false, TriggerMode=0, UDB16=false, UDB24=false, UDB32=false, UDB8=false, UDBControlReg=false, UsesHWEnable=1, VerilogSectionReplacementString=sT16, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=Timer_v2_70, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Timer3, CY_INSTANCE_SHORT_NAME=Timer3, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=70, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.0 Update 1, INSTANCE_NAME=Timer3, )
+module Timer_v2_70_7 (
+    reset,
+    interrupt,
+    enable,
+    trigger,
+    capture,
+    capture_out,
+    tc,
+    clock);
+    input       reset;
+    output      interrupt;
+    input       enable;
+    input       trigger;
+    input       capture;
+    output      capture_out;
+    output      tc;
+    input       clock;
+
+    parameter CaptureCount = 2;
+    parameter CaptureCounterEnabled = 0;
+    parameter DeviceFamily = "PSoC5";
+    parameter InterruptOnCapture = 0;
+    parameter InterruptOnTC = 0;
+    parameter Resolution = 16;
+    parameter SiliconRevision = "0";
+
+          wire  Net_261;
+          wire  Net_260;
+          wire  Net_266;
+          wire  Net_102;
+          wire  Net_55;
+          wire  Net_57;
+          wire  Net_53;
+          wire  Net_51;
+
+    cy_psoc3_timer_v1_0 TimerHW (
+        .timer_reset(reset),
+        .capture(capture),
+        .enable(Net_266),
+        .kill(Net_260),
+        .clock(clock),
+        .tc(Net_51),
+        .compare(Net_261),
+        .interrupt(Net_57));
+
+    ZeroTerminal ZeroTerminal_1 (
+        .z(Net_260));
+
+	// VirtualMux_2 (cy_virtualmux_v1_0)
+	assign interrupt = Net_57;
+
+	// VirtualMux_3 (cy_virtualmux_v1_0)
+	assign tc = Net_51;
+
+    OneTerminal OneTerminal_1 (
+        .o(Net_102));
+
+	// VirtualMux_1 (cy_virtualmux_v1_0)
+	assign Net_266 = enable;
+
+
+
+endmodule
+
 // top
 module top ;
 
+          wire  Net_1334;
+          wire  Net_1333;
+          wire  Net_1332;
+          wire  Net_1331;
+          wire  Net_1330;
+          wire  Net_1329;
+          wire  Net_1327;
+          wire  Net_1326;
+          wire  Net_1325;
+          wire  Net_1320;
+          wire  Net_1319;
+          wire  Net_1335;
+          wire  Net_1317;
+          wire  Net_1315;
+          wire  Net_1296;
+          wire  Net_1295;
+          wire  Net_1294;
+          wire  Net_1293;
+          wire  Net_1292;
+          wire  Net_1291;
+          wire  Net_1289;
+          wire  Net_1288;
+          wire  Net_1287;
           wire  Net_1041;
           wire  Net_1040;
           wire  Net_1039;
@@ -1248,19 +1336,22 @@ module top ;
           wire  Net_89;
           wire  Net_88;
     electrical  Net_87;
-          wire  Net_6;
-          wire  Net_5;
-          wire  Net_4;
-          wire  Net_3;
-          wire  Net_161;
+          wire  Net_1268;
+          wire  Net_1267;
+          wire  Net_1266;
+          wire  Net_1265;
+          wire  Net_1264;
           wire  Net_81;
+          wire  Net_1339;
+          wire  Net_1342;
+          wire  Net_1337;
+          wire  Net_198;
+          wire  Net_1322;
           wire  Net_1042;
           wire  Net_1238;
           wire  Net_1257;
           wire  Net_1258;
           wire  Net_24;
-          wire  Net_198;
-          wire  Net_422;
           wire  Net_35;
           wire  Net_147;
     electrical  Net_229;
@@ -1271,7 +1362,6 @@ module top ;
     electrical  Net_209;
     electrical  Net_215;
     electrical  Net_157;
-          wire  Net_197;
 
 
 	cy_clock_v1_0
@@ -1282,21 +1372,21 @@ module top ;
 		  .is_direct(0),
 		  .is_digital(1))
 		timer_clock
-		 (.clock_out(Net_422));
+		 (.clock_out(Net_1322));
 
 
     ZeroTerminal ZeroTerminal_1 (
-        .z(Net_197));
+        .z(Net_1337));
 
     Timer_v2_70_0 Timer (
-        .reset(Net_197),
-        .interrupt(Net_161),
+        .reset(Net_1337),
+        .interrupt(Net_1264),
         .enable(1'b1),
         .trigger(1'b1),
         .capture(1'b0),
-        .capture_out(Net_6),
+        .capture_out(Net_1268),
         .tc(Net_198),
-        .clock(Net_422));
+        .clock(Net_1322));
     defparam Timer.CaptureCount = 2;
     defparam Timer.CaptureCounterEnabled = 0;
     defparam Timer.DeviceFamily = "PSoC5";
@@ -1775,7 +1865,7 @@ module top ;
         .capture(1'b0),
         .capture_out(Net_329),
         .tc(Net_330),
-        .clock(Net_422));
+        .clock(Net_1322));
     defparam Timer2.CaptureCount = 2;
     defparam Timer2.CaptureCounterEnabled = 0;
     defparam Timer2.DeviceFamily = "PSoC5";
@@ -2217,6 +2307,71 @@ module top ;
     defparam T1.SiliconRevision = "0";
 
     assign Net_1258 = 1'h0;
+
+    CyControlReg_v1_80 EnableTimer3 (
+        .control_1(Net_1287),
+        .control_2(Net_1288),
+        .control_3(Net_1289),
+        .control_0(Net_1342),
+        .control_4(Net_1291),
+        .control_5(Net_1292),
+        .control_6(Net_1293),
+        .control_7(Net_1294),
+        .clock(1'b0),
+        .reset(1'b0));
+    defparam EnableTimer3.Bit0Mode = 0;
+    defparam EnableTimer3.Bit1Mode = 0;
+    defparam EnableTimer3.Bit2Mode = 0;
+    defparam EnableTimer3.Bit3Mode = 0;
+    defparam EnableTimer3.Bit4Mode = 0;
+    defparam EnableTimer3.Bit5Mode = 0;
+    defparam EnableTimer3.Bit6Mode = 0;
+    defparam EnableTimer3.Bit7Mode = 0;
+    defparam EnableTimer3.BitValue = 1;
+    defparam EnableTimer3.BusDisplay = 0;
+    defparam EnableTimer3.ExtrReset = 0;
+    defparam EnableTimer3.NumOutputs = 1;
+
+    Timer_v2_70_7 Timer3 (
+        .reset(Net_1339),
+        .interrupt(Net_1315),
+        .enable(Net_1342),
+        .trigger(1'b1),
+        .capture(1'b0),
+        .capture_out(Net_1319),
+        .tc(Net_1320),
+        .clock(Net_1322));
+    defparam Timer3.CaptureCount = 2;
+    defparam Timer3.CaptureCounterEnabled = 0;
+    defparam Timer3.DeviceFamily = "PSoC5";
+    defparam Timer3.InterruptOnCapture = 0;
+    defparam Timer3.InterruptOnTC = 0;
+    defparam Timer3.Resolution = 16;
+    defparam Timer3.SiliconRevision = "0";
+
+    CyControlReg_v1_80 ResetTimer3 (
+        .control_1(Net_1325),
+        .control_2(Net_1326),
+        .control_3(Net_1327),
+        .control_0(Net_1339),
+        .control_4(Net_1329),
+        .control_5(Net_1330),
+        .control_6(Net_1331),
+        .control_7(Net_1332),
+        .clock(1'b0),
+        .reset(1'b0));
+    defparam ResetTimer3.Bit0Mode = 0;
+    defparam ResetTimer3.Bit1Mode = 0;
+    defparam ResetTimer3.Bit2Mode = 0;
+    defparam ResetTimer3.Bit3Mode = 0;
+    defparam ResetTimer3.Bit4Mode = 0;
+    defparam ResetTimer3.Bit5Mode = 0;
+    defparam ResetTimer3.Bit6Mode = 0;
+    defparam ResetTimer3.Bit7Mode = 0;
+    defparam ResetTimer3.BitValue = 0;
+    defparam ResetTimer3.BusDisplay = 0;
+    defparam ResetTimer3.ExtrReset = 0;
+    defparam ResetTimer3.NumOutputs = 1;
 
 
 

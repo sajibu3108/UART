@@ -6,7 +6,7 @@
 
 #Build Date:         Apr 29 2016 09:00:55
 
-#File Generated:     May 9 2017 16:14:48
+#File Generated:     May 9 2017 17:26:24
 
 #Purpose:            
 
@@ -47,7 +47,7 @@ Design Statistics after Packing
     Number of Combinational MCs 	:	11
     Number of Sequential MCs    	:	17
     Number of DPs               	:	6
-    Number of Controls          	:	3
+    Number of Controls          	:	5
     Number of Status            	:	3
     Number of SyncCells         	:	0
     Number of count7cells       	:	1
@@ -84,7 +84,7 @@ Clock: ADC_Ext_CP_Clk       | Frequency: N/A       | Target:  24.0 MHz
 Clock: ADC_Ext_CP_Clk(routed) | Frequency: N/A       | Target:  24.0 MHz
 Clock: ADC_theACLK          | Frequency: N/A       | Target:   0.1 MHz
 Clock: ADC_theACLK(fixed-function) | Frequency: N/A       | Target:   0.1 MHz
-Clock: CyBUS_CLK            | Frequency:  55.6 MHz | Target:  24.0 MHz
+Clock: CyBUS_CLK            | Frequency:  53.8 MHz | Target:  24.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.1 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  24.0 MHz
@@ -128,13 +128,13 @@ Clock: timer_clock(fixed-function) | Frequency: N/A       | Target:   1.0 MHz
 ======================================================================
                      End of Clock Summary
 ######################################################################
-D2088: Phase 7, elapsed time : 0.2 (sec)
+D2088: Phase 7, elapsed time : 0.4 (sec)
 
 Final Design Statistics
     Number of Combinational MCs 	:	11
     Number of Sequential MCs    	:	17
     Number of DPs               	:	6
-    Number of Controls          	:	3
+    Number of Controls          	:	5
     Number of Status            	:	3
     Number of SyncCells         	:	0
     Number of count7cells       	:	1
@@ -163,13 +163,13 @@ Clock: ADC_Ext_CP_Clk       | Frequency: N/A       | Target:  24.0 MHz
 Clock: ADC_Ext_CP_Clk(routed) | Frequency: N/A       | Target:  24.0 MHz
 Clock: ADC_theACLK          | Frequency: N/A       | Target:   0.1 MHz
 Clock: ADC_theACLK(fixed-function) | Frequency: N/A       | Target:   0.1 MHz
-Clock: CyBUS_CLK            | Frequency:   1.4 MHz | Target:  24.0 MHz
+Clock: CyBUS_CLK            | Frequency:   1.5 MHz | Target:  24.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.1 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyPLL_OUT            | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyXTAL               | Frequency: N/A       | Target:  24.0 MHz
-Clock: UART_IntClock        | Frequency:   1.4 MHz | Target:   0.9 MHz
+Clock: UART_IntClock        | Frequency:   1.5 MHz | Target:   0.9 MHz
 Clock: \ADC:DSM\/dec_clock  | Frequency: N/A       | Target:   0.1 MHz
 Clock: reloj1               | Frequency: N/A       | Target:   0.0 MHz
 Clock: reloj1(fixed-function) | Frequency: N/A       | Target:   0.0 MHz
@@ -185,5 +185,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 1.0 sec.
+I2076: Total run-time: 1.1 sec.
 
